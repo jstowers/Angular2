@@ -139,6 +139,8 @@ Authors
 5.	Use dependency injection
 
 
+## Friday, January 13, 2017
+
 ### Directives		(Sec. 2, Lec. 19)
 1.	In HTML, use <input> tag to render an input box.
 
