@@ -143,11 +143,24 @@ Extend App by Adding an Authors' Section:
 ## Friday, January 13, 2017
 
 ### Directives		(Sec. 2, Lec. 19)
-1.	In HTML, use <input> tag to render an input box.
+1.	Three Kinds of Directives:
+	a.	Components - directives with a template
+	b.	Structureal directives - change the structure of the view (i.e., NgFor, NgIf)
+	c.	Attribute directives - change the appearance or behavior of an element
 
-2.	Use directive to extend behavior of <input> tag to grow on mouseover => <input autogrow>
+2. 	In HTML, use <input> tag to render an input box.
 
-3.	
+3.	Use directive to extend behavior of <input> tag to grow on mouseover '<input autoGrow>'
+
+Summary:
+Implemented an attribute directive that highlights
+the border of an input text box when the mouse moves over the box.
+
+Technical Learnings:
+1.	
+
+
+
 
 
 
