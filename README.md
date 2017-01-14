@@ -117,9 +117,7 @@ create in constructor of CoursesComponent.
 	doesn't know how to create that service.
 
 
-### Module
-#### Section 2, Lecture 21
-
+### Module 		(Sec. 2, Lec. 21)
 1.	Module - a block of highly-related classes.
 
 2.	Best change in Ang2 beta.
@@ -127,24 +125,24 @@ create in constructor of CoursesComponent.
 3.	For each application, start with AppModule.
 
 
-### Exercise
-#### Extend First Angular2 App
-
+### Exercise	(Extend App)
 Authors
+
 1.	Create a component
+
 2.	Set the properties
+
 3.	User interpolation {{ }}
+
 4.	Create a service - get authors from server
+
 5.	Use dependency injection
 
 
-### Directives
-#### Section 2, Lecture 19
-
+### Directives		(Sec. 2, Lec. 19)
 1.	In HTML, use <input> tag to render an input box.
 
-2.	Use directive to extend behavior of <input> tag to grow on mouseover.
-	<input autogrow>
+2.	Use directive to extend behavior of <input> tag to grow on mouseover => <input autogrow>
 
 3.	
 
