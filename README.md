@@ -103,6 +103,7 @@ courses.  Won't concern ourselves with consuming a RESTful API.
 create in constructor of CoursesComponent.
 
 7.	Dependency Injection Framework
+
 		Need to create service and pass into component
 
 		Inject class dependencies when creating the class.
@@ -125,14 +126,14 @@ create in constructor of CoursesComponent.
 3.	For each application, start with AppModule.
 
 
-### Exercise	(Extend App)
-Authors
+### Exercise
+Extend App by Adding an Authors' Section:
 
 1.	Create a component
 
 2.	Set the properties
 
-3.	User interpolation {{ }}
+3.	Use interpolation {{ }}
 
 4.	Create a service - get authors from server
 
