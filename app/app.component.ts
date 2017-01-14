@@ -12,6 +12,14 @@ import {AuthorService} from './authors.service';
     template: `
     		<h1>{{ title }}</h1>
     		<img [src] = "imageUrl" />
+    		<button
+    			class = "btn btn-lg btn-primary"
+    			[style.backgroundColor]= "isActive ? 'light blue' : 'gray'">Lg Submit
+			</button>
+			<button
+				class = "btn btn-md btn-primary" 
+    			[class.disabled]="isDisabled">Med Disabled
+			</button>
     		<courses></courses>
     		<authors></authors>
     		`,
@@ -19,8 +27,19 @@ import {AuthorService} from './authors.service';
 })
 
 // view component that takes control over entire app
+// lorempixel.com displays random photos to test your app template
 export class AppComponent { 
 	title = "My First Angular 2 App";
-	imageUrl = "http://lorempixel.com/400/200/"
+	imageUrl = "http://lorempixel.com/400/200/";
+	// Bootstrap button class modifiers
+	isActive = true;
+	isDisabled = true;
 
 }
+
+/*
+
+	<button 
+    			
+
+*/

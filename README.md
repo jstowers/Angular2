@@ -2,12 +2,10 @@ Joseph Stowers
 January 13, 2017
 
 Angular2 Development Course
-Udemy
+Udemy - Mosh Hamedani
 
 
-
-
-## Development Environment
+## Setting Up the Development Environment
 
 1.	Download the seed-beta
 
@@ -158,7 +156,7 @@ Implemented an attribute directive that utilizes the onFocus() and onBlur() even
 This directive would be helpful for form validation.
 
 
-### Property Binding
+### Property Binding  (Sec. 3, Lec. 25)
 
 1.	Interpolation 
 
@@ -183,12 +181,23 @@ This directive would be helpful for form validation.
 
 		b.	<img bind-src = "imageUrl" />
 
-5.	Interpolation works well for dynamic headings, divs, and paragraphs, or wherever you want to render text.
+5.	Interpolation works well for dynamic headings, divs, and paragraphs, or wherever you want to render text.  Use the second syntax for everything else.
 
 
+## Saturday, January 14, 2017
+
+### Class Binding   (Sec. 3, Lec. 26)
+
+1.	Use to modify bootstrap classes in Angular
+
+2.	<button class = "btn btn-primary" [class.disabled]="isDisabled">Submit</button>
 
 
+### Style Binding
 
+1.	Variation of property binding
+
+2.	Can apply inline style to an element
 
 
 
