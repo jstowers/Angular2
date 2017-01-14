@@ -26,12 +26,14 @@ System.register(['angular2/core', './courses.component', './authors.component'],
         execute: function() {
             AppComponent = (function () {
                 function AppComponent() {
+                    this.title = "My First Angular 2 App";
+                    this.imageUrl = "http://lorempixel.com/400/200/";
                 }
                 AppComponent = __decorate([
                     core_1.Component({
                         // when Ang2 sees 'my-app', it will place the <h1> and <courses> elements
                         selector: 'my-app',
-                        template: "\n    \t\t<h1>My First Angular 2 App</h1>\n    \t\t<courses></courses>\n    \t\t<authors></authors>\n    \t\t",
+                        template: "\n    \t\t<h1>{{ title }}</h1>\n    \t\t<img [src] = \"imageUrl\" />\n    \t\t<courses></courses>\n    \t\t<authors></authors>\n    \t\t",
                         directives: [courses_component_1.CoursesComponent, authors_component_1.AuthorsComponent]
                     }), 
                     __metadata('design:paramtypes', [])

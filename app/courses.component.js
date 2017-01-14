@@ -35,7 +35,7 @@ System.register(['angular2/core', './course.service', './auto-grow.directive'], 
                 // modular code and more efficient testing.
                 // when unit testing, can pass a mock or fake service
                 function CoursesComponent(courseService) {
-                    this.title = "The title of courses page.";
+                    this.title = "Title for the courses page";
                     this.courses = courseService.getCourses();
                 }
                 CoursesComponent = __decorate([

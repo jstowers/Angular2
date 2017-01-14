@@ -32,10 +32,14 @@ export class AutoGrowDirective {
 	}
 
 	// methods
+
+	// occurs when an element gets focus
 	onFocus() {
 		this.renderer.setElementStyle(this.el.nativeElement, 'width', '200');	
 	}
 
+	// most often used with form validation code
+	// when a user leaves a form field
 	onBlur() {
 		this.renderer.setElementStyle(this.el.nativeElement, 'width', '120');	
 	}

@@ -32,9 +32,12 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                     this.renderer = renderer;
                 }
                 // methods
+                // occurs when an element gets focus
                 AutoGrowDirective.prototype.onFocus = function () {
                     this.renderer.setElementStyle(this.el.nativeElement, 'width', '200');
                 };
+                // most often used with form validation code
+                // when a user leaves a form field
                 AutoGrowDirective.prototype.onBlur = function () {
                     this.renderer.setElementStyle(this.el.nativeElement, 'width', '120');
                 };

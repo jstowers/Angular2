@@ -153,11 +153,40 @@ Extend App by Adding an Authors' Section:
 3.	Use directive to extend behavior of <input> tag to grow on mouseover '<input autoGrow>'
 
 Summary:
-Implemented an attribute directive that highlights
-the border of an input text box when the mouse moves over the box.
+Implemented an attribute directive that utilizes the onFocus() and onBlur() events to highlight the border of an input text box.
 
-Technical Learnings:
-1.	
+This directive would be helpful for form validation.
+
+
+### Property Binding
+
+1.	Interpolation 
+
+		<h1> {{ title }} </h1>
+		<img src = "{{ imageUrl }}" />
+
+	Used to display properties of a component in the view.
+	
+	Interpolation is just syntatical sugar.  Behind the scenes, when Angular2 compiles the template, it translates interpolation into property binding.
+
+2.	What is Property Binding?
+
+	Binding the property in a component to a property of a DOM element.  Property binding works one way, from component to the DOM.
+
+		Component (with its properties) -----> DOM 
+
+	If the property changes in the component, the DOM element will be updated.  But any changes in the DOM are not reflected back to the component. 
+
+4.	Two Property Binding Syntaxes
+
+		a.	<img [src] = "imageUrl" />
+
+		b.	<img bind-src = "imageUrl" />
+
+5.	Interpolation works well for dynamic headings, divs, and paragraphs, or wherever you want to render text.
+
+
+
 
 
 

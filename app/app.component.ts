@@ -10,7 +10,8 @@ import {AuthorService} from './authors.service';
 	// when Ang2 sees 'my-app', it will place the <h1> and <courses> elements
     selector: 'my-app',
     template: `
-    		<h1>My First Angular 2 App</h1>
+    		<h1>{{ title }}</h1>
+    		<img [src] = "imageUrl" />
     		<courses></courses>
     		<authors></authors>
     		`,
@@ -18,4 +19,8 @@ import {AuthorService} from './authors.service';
 })
 
 // view component that takes control over entire app
-export class AppComponent { }
+export class AppComponent { 
+	title = "My First Angular 2 App";
+	imageUrl = "http://lorempixel.com/400/200/"
+
+}

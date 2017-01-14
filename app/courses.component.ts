@@ -57,7 +57,7 @@ import {AutoGrowDirective} from './auto-grow.directive'
 // Specify properties of the component to export
 export class CoursesComponent {
 
-	title = "The title of courses page.";
+	title = "Title for the courses page";
 
 	courses;
 
