@@ -14,7 +14,8 @@ import {AuthorService} from './authors.service';
     		<img [src] = "imageUrl" />
     		<button
     			class = "btn btn-lg btn-primary"
-    			[style.backgroundColor]= "isActive ? 'light blue' : 'gray'">Lg Submit
+    			[style.backgroundColor]= "isActive ? 'light blue' : 'gray'"	
+    			(click) = 'onClick()'>Lg Submit
 			</button>
 			<button
 				class = "btn btn-md btn-primary" 
@@ -34,6 +35,10 @@ export class AppComponent {
 	// Bootstrap button class modifiers
 	isActive = true;
 	isDisabled = true;
+
+	onClick() {
+		console.log('Clicked')
+	};
 
 }
 

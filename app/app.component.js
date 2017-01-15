@@ -32,11 +32,15 @@ System.register(['angular2/core', './courses.component', './authors.component'],
                     this.isActive = true;
                     this.isDisabled = true;
                 }
+                AppComponent.prototype.onClick = function () {
+                    console.log('Clicked');
+                };
+                ;
                 AppComponent = __decorate([
                     core_1.Component({
                         // when Ang2 sees 'my-app', it will place the <h1> and <courses> elements
                         selector: 'my-app',
-                        template: "\n    \t\t<h1>{{ title }}</h1>\n    \t\t<img [src] = \"imageUrl\" />\n    \t\t<button\n    \t\t\tclass = \"btn btn-lg btn-primary\"\n    \t\t\t[style.backgroundColor]= \"isActive ? 'light blue' : 'gray'\">Lg Submit\n\t\t\t</button>\n\t\t\t<button\n\t\t\t\tclass = \"btn btn-md btn-primary\" \n    \t\t\t[class.disabled]=\"isDisabled\">Med Disabled\n\t\t\t</button>\n    \t\t<courses></courses>\n    \t\t<authors></authors>\n    \t\t",
+                        template: "\n    \t\t<h1>{{ title }}</h1>\n    \t\t<img [src] = \"imageUrl\" />\n    \t\t<button\n    \t\t\tclass = \"btn btn-lg btn-primary\"\n    \t\t\t[style.backgroundColor]= \"isActive ? 'light blue' : 'gray'\"\t\n    \t\t\t(click) = 'onClick()'>Lg Submit\n\t\t\t</button>\n\t\t\t<button\n\t\t\t\tclass = \"btn btn-md btn-primary\" \n    \t\t\t[class.disabled]=\"isDisabled\">Med Disabled\n\t\t\t</button>\n    \t\t<courses></courses>\n    \t\t<authors></authors>\n    \t\t",
                         directives: [courses_component_1.CoursesComponent, authors_component_1.AuthorsComponent]
                     }), 
                     __metadata('design:paramtypes', [])
