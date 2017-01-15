@@ -12,6 +12,11 @@ import {AuthorService} from './authors.service';
     template: `
     		<h1>{{ title }}</h1>
     		<img [src] = "imageUrl" />
+
+    		<input type = "text" [value] = "title" (input) = "onChangeInput($event)">
+
+    		<input type = "button"(click)=onClearTitle() value = "Clear" />
+
     		<div (click) = "onDivClick($event)">
     			<button
     				class = "btn btn-lg btn-primary"
@@ -40,9 +45,12 @@ export class AppComponent {
 	isActive = true;
 	isDisabled = true;
 
+	
+
+
 	onDivClick($event) {
 		console.log('Click Event Propagation', $event.target);
-	}
+	};
 
 	// Can use methods to get access to the DOM element that 
 	// raised the event.
@@ -51,6 +59,18 @@ export class AppComponent {
 		$event.stopPropagation();
 		console.log('Clicked', $event)
 	};
+
+	// implement two-data binding manually
+	onChangeInput($event) {
+		this.title = $event.target.value;
+		console.log('this.title =', this.title);
+	}
+
+	onClearTitle() {
+		this.title = '';
+		console.log('this.title =', this.title)
+	}
+
 
 }
 

@@ -253,9 +253,37 @@ This directive would be helpful for form validation.
 			$event.stopPropagation()
 
 
+## Sunday, January 15, 2017
 
+### Two-Way Binding
 
+1.	ngModel
 
+	a.	Two-way binding between a DOM property and a component property.
+
+	b.	Syntax is a combination of event () and property [] binding:
+
+			<input type = "text" [(ngModel)] = "title" />	
+
+### Building a Favorite Component
+
+1.	Star 
+
+	Default - star is empty
+
+	Click - becomes full
+
+	On Click again - becomes empty
+
+2.	Process
+	
+	a.	Render an icon
+
+	b.	Handle the click event
+
+	c.	To render an icon:
+
+		
 
 
 
