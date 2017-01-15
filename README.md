@@ -1,8 +1,6 @@
-Joseph Stowers
-January 13, 2017
 
-Angular2 Development Course
-Udemy - Mosh Hamedani
+# Angular2 Development Course
+Instructor: Mosh Hamedani (Udemy)
 
 
 ## Setting Up the Development Environment
@@ -241,7 +239,7 @@ This directive would be helpful for form validation.
 
 	d.	$event.target
 
-			target property represents the DOM event (button)	
+			The target property represents the DOM element (button) raised by the event onClick()
 
 	e.	If you don't pass the $event in your template, then the event will not be available in the method.
 
