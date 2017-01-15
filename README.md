@@ -222,7 +222,37 @@ This directive would be helpful for form validation.
 
 		appComponent['title']
 
-4.		
+4.	$event Object
+
+	a.	To capture the $event object, pass $event as a parameter in the event callback from the template:
+
+			<div (click) = "onDivClick($event)">
+
+	b.	$event gives you access to the DOM element that raised the event
+
+	c.	This allows for easy modification of the event in the class method:
+
+			class MyComponent {
+
+  				clicked(event) {
+    				event.preventDefault();
+  				}
+			}
+
+	d.	$event.target
+
+			target property represents the DOM event (button)	
+
+	e.	If you don't pass the $event in your template, then the event will not be available in the method.
+
+
+5.	Event Propagation
+
+	a.	All events bubble up the DOM tree unless a handler prevents further bubbling.
+
+	b.	The handler to stop bubbling is stopPropagation()
+
+			$event.stopPropagation()
 
 
 

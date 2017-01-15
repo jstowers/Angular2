@@ -12,11 +12,13 @@ import {AuthorService} from './authors.service';
     template: `
     		<h1>{{ title }}</h1>
     		<img [src] = "imageUrl" />
-    		<button
-    			class = "btn btn-lg btn-primary"
-    			[style.backgroundColor]= "isActive ? 'light blue' : 'gray'"	
-    			(click) = 'onClick()'>Lg Submit
-			</button>
+    		<div (click) = "onDivClick($event)">
+    			<button
+    				class = "btn btn-lg btn-primary"
+    				[style.backgroundColor]= "isActive ? 'light blue' : 'gray'"	
+    				(click) = 'onClick($event)'>Lg Submit
+				</button>
+    		</div>
 			<button
 				class = "btn btn-md btn-primary" 
     			[class.disabled]="isDisabled">Med Disabled
@@ -31,13 +33,23 @@ import {AuthorService} from './authors.service';
 // lorempixel.com displays random photos to test your app template
 export class AppComponent { 
 	title = "My First Angular 2 App";
+	
 	imageUrl = "http://lorempixel.com/400/200/";
+	
 	// Bootstrap button class modifiers
 	isActive = true;
 	isDisabled = true;
 
-	onClick() {
-		console.log('Clicked')
+	onDivClick($event) {
+		console.log('Click Event Propagation', $event.target);
+	}
+
+	// Can use methods to get access to the DOM element that 
+	// raised the event.
+	// $event => gives you access to the DOM event (object)
+	onClick($event) {
+		$event.stopPropagation();
+		console.log('Clicked', $event)
 	};
 
 }
