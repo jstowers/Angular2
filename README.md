@@ -200,6 +200,31 @@ This directive would be helpful for form validation.
 2.	Can apply inline style to an element
 
 
+### Event Binding
+
+1.	Handles movements from the DOM like keystrokes, clicks, mouse movements.  Bind to methods.
+
+2.	Two syntaxes: () and on-
+	a. 	<button (click) = "onClick()" >Submit
+	b. 	<button on-click = "onClick()" >Submit
+
+3.	Event vs. Property Binding
+
+	a.	Parenthesis fof Event Binding
+
+		Use () for calling methods and subscribing to events.
+
+		methods()
+
+	b.	Brackets for Property Binding
+
+		In JavaScript, access "property" of an object using [ ]
+
+		appComponent['title']
+
+4.		
+
+
 
 
 
