@@ -1,4 +1,4 @@
-System.register(['angular2/core', './courses.component', './authors.component', './binding.component'], function(exports_1, context_1) {
+System.register(['angular2/core', './courses.component', './authors.component', './favorite.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', './courses.component', './authors.component', 
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, courses_component_1, authors_component_1, binding_component_1;
+    var core_1, courses_component_1, authors_component_1, favorite_component_1;
     var AppComponent;
     return {
         setters:[
@@ -23,8 +23,8 @@ System.register(['angular2/core', './courses.component', './authors.component', 
             function (authors_component_1_1) {
                 authors_component_1 = authors_component_1_1;
             },
-            function (binding_component_1_1) {
-                binding_component_1 = binding_component_1_1;
+            function (favorite_component_1_1) {
+                favorite_component_1 = favorite_component_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
@@ -34,10 +34,9 @@ System.register(['angular2/core', './courses.component', './authors.component', 
                 }
                 AppComponent = __decorate([
                     core_1.Component({
-                        // when Ang2 sees 'my-app', it will place the <h1> and <courses> elements
                         selector: 'my-app',
-                        template: "\n    \t\t\t<h1>{{ title }}</h1>\n    \t\t\t<img [src] = \"imageUrl\" />\n    \t\t\t<authors></authors>\n    \t\t\t<binding></binding>\n    \t\t",
-                        directives: [courses_component_1.CoursesComponent, authors_component_1.AuthorsComponent, binding_component_1.BindingComponent]
+                        template: "\n    \t\t\t<h1>{{ title }}</h1>\n    \t\t\t<img [src] = \"imageUrl\" />\n    \t\t\t<authors></authors>\n    \t\t\t<favorite></favorite>\n    \t\t",
+                        directives: [courses_component_1.CoursesComponent, authors_component_1.AuthorsComponent, favorite_component_1.FavoriteComponent]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
@@ -47,10 +46,4 @@ System.register(['angular2/core', './courses.component', './authors.component', 
         }
     }
 });
-/*
-
-    <button
-                
-
-*/ 
 //# sourceMappingURL=app.component.js.map

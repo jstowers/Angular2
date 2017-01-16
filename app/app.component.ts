@@ -6,19 +6,22 @@ import {CourseService} from './course.service';
 import {AuthorsComponent} from './authors.component';
 import {AuthorService} from './authors.service';
 
-import {BindingComponent} from './binding.component';
+// import {BindingComponent} from './binding.component';
+import {FavoriteComponent} from './favorite.component';
+
 
 @Component({
-	// when Ang2 sees 'my-app', it will place the <h1> and <courses> elements
+
     selector: 'my-app',
+
     template: `
     			<h1>{{ title }}</h1>
     			<img [src] = "imageUrl" />
     			<authors></authors>
-    			<binding></binding>
+    			<favorite></favorite>
     		`,
 
-    directives: [CoursesComponent, AuthorsComponent, BindingComponent]
+    directives: [CoursesComponent, AuthorsComponent, FavoriteComponent]
 })
 
 // view component that takes control over entire app
@@ -30,10 +33,3 @@ export class AppComponent {
 	imageUrl = "http://lorempixel.com/400/200/";
 	
 }
-
-/*
-
-	<button 
-    			
-
-*/
