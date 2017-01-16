@@ -267,13 +267,13 @@ This directive would be helpful for form validation.
 
 ### Building a Favorite Component
 
-1.	Star 
+1.	Glyphicon Star
 
-	Default - star is empty
+	a.	On render - star empty
 
-	Click - becomes full
+	b.	On click - star solid
 
-	On Click again - becomes empty
+	c.	On click again - star empty
 
 2.	Process
 	
@@ -281,10 +281,42 @@ This directive would be helpful for form validation.
 
 	b.	Handle the click event
 
-	c.	To render an icon:
-
 		
+### Component API
 
+1.	Goal
+
+	a.	Use property binding to bind isFavorite property to some data.
+
+	b.	Use event binding to subscribe to events raised from this component (like a change event)
+
+2.	Public Component API
+
+		--data--> input { COMPONENT } output --event-->
+
+	a.	can mark properties as input or output, making them visible to the outside
+		and available for event binding
+
+	b.	the input and output properties form the public API of a component
+
+3.	Input Properties
+
+	a.	Two ways to expose a private component property to the outside:
+
+		i.	Input decorator (@Input) in export class
+		ii.	input property array in @Component metadata
+
+	b.	Input Decorator
+
+		i.	Import into component:
+
+				import { Component, Input } from 'angular2/core';
+
+		ii.	Apply to the desired property:
+
+				@Input isFavorite = false;
+
+		ii.	It's a function and call it.
 
 
 

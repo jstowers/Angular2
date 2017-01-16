@@ -6,7 +6,7 @@ import {CourseService} from './course.service';
 import {AuthorsComponent} from './authors.component';
 import {AuthorService} from './authors.service';
 
-// import {BindingComponent} from './binding.component';
+import {BindingComponent} from './binding.component';
 import {FavoriteComponent} from './favorite.component';
 
 
@@ -18,10 +18,11 @@ import {FavoriteComponent} from './favorite.component';
     			<h1>{{ title }}</h1>
     			<img [src] = "imageUrl" />
     			<authors></authors>
+    			<binding [title] = "title"></binding>
     			<favorite></favorite>
     		`,
 
-    directives: [CoursesComponent, AuthorsComponent, FavoriteComponent]
+    directives: [CoursesComponent, AuthorsComponent, BindingComponent, FavoriteComponent]
 })
 
 // view component that takes control over entire app
