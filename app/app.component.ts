@@ -18,8 +18,8 @@ import {FavoriteComponent} from './favorite.component';
     			<h1>{{ title }}</h1>
     			<img [src] = "imageUrl" />
     			<authors></authors>
-    			<binding [title] = "title"></binding>
-    			<favorite></favorite>
+    			<binding [bind-title] = "title"></binding>
+    			<favorite [isFavorite] = "post.isFavorite"></favorite>
     		`,
 
     directives: [CoursesComponent, AuthorsComponent, BindingComponent, FavoriteComponent]
@@ -32,5 +32,12 @@ export class AppComponent {
 	title = "My First Angular 2 App";
 	
 	imageUrl = "http://lorempixel.com/400/200/";
+
+	// can bind post.isFavorite property value to our isFavorite
+	// property in the <favorite> component
+	post = {
+		title: "Post Title",
+		isFavorite: true
+	}
 	
 }

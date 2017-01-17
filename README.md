@@ -304,7 +304,7 @@ This directive would be helpful for form validation.
 	a.	Two ways to expose a private component property to the outside:
 
 		i.	Input decorator (@Input) in export class
-		ii.	input property array in @Component metadata
+		ii.	Inputs property array [ ] inside @Component decorator
 
 	b.	Input Decorator
 
@@ -316,7 +316,37 @@ This directive would be helpful for form validation.
 
 				@Input isFavorite = false;
 
-		ii.	It's a function and call it.
+		iii.	It's a function and call it.
+
+	c.	Inputs property inside @Component
+
+		i.	Syntax:
+
+				@Component({
+
+					selector: ...,
+
+					template: ...,
+
+					inputs: ['isFavorite']
+				})
+
+
+		ii.	Can list all inputs in one place as part of component metadata.  Good way to document a component, but if you refactor the code and change the property name, you will
+		have to change the name here as well.  This additional step
+		is not as efficient as using the @Input decorator above.
+	
+	d.	Aliases
+
+		i.	Can create an alias for the public name of the property
+
+		ii.	Here, is-Favorite is the public name, while isFavorite is private:
+
+				@Input('is-Favorite) isFavorite = false;
+
+				inputs: ['isFavorite:is-Favorite'];
+
+
 
 
 

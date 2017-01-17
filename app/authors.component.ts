@@ -6,13 +6,15 @@ import {AuthorService} from './authors.service'
 	selector: 'authors',
 
 	template: `
-		<h2>Authors</h2>
-		{{ title }}
-		<ul>
-			<li *ngFor = "#author of authors">
-			{{ author }}
-			</li>
-		</ul>
+		<div>
+			<h2>Authors</h2>
+			{{ title }}
+			<ul>
+				<li *ngFor = "#author of authors">
+				{{ author }}
+				</li>
+			</ul>
+		</div>
 		`,
 
 	providers: [AuthorService]

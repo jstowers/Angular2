@@ -1,5 +1,5 @@
 // import Component from Ang2
-import {Component} from 'angular2/core';
+import {Component, Input} from 'angular2/core';
 
 @Component({
 
@@ -18,7 +18,7 @@ import {Component} from 'angular2/core';
 export class FavoriteComponent {
 
 	// initial value for favorite
-	isFavorite = false;
+	@Input() isFavorite = false;
 
 	// method toggles favorite on/off
 	onClick() {

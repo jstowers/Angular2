@@ -8,6 +8,7 @@ import {AppComponent} from './app.component';
 	selector: 'binding',
 
 	template: `
+		<div>
 		  	<input type = "text" [value] = "title" (input) = "onChangeInput($event)">
 
     		<input type = "button"(click)=onClearTitle() value = "Clear" />
@@ -23,7 +24,9 @@ import {AppComponent} from './app.component';
 				class = "btn btn-md btn-primary" 
     			[class.disabled]="isDisabled">Med Disabled
 			</button>
-    		`,
+
+		</div>	
+    	`,
 
 })
 
@@ -33,7 +36,7 @@ export class BindingComponent {
 	isActive = true;
 	isDisabled = true;
 
-	@Input() title = 'Binding Title';
+	@Input('bind-title') title = 'Binding Title';
 
 	/*
 	constructor (app:AppComponent) {

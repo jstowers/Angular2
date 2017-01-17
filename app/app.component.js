@@ -34,11 +34,17 @@ System.register(['angular2/core', './courses.component', './authors.component', 
                 function AppComponent() {
                     this.title = "My First Angular 2 App";
                     this.imageUrl = "http://lorempixel.com/400/200/";
+                    // can bind post.isFavorite property value to our isFavorite
+                    // property in the <favorite> component
+                    this.post = {
+                        title: "Post Title",
+                        isFavorite: true
+                    };
                 }
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: "\n    \t\t\t<h1>{{ title }}</h1>\n    \t\t\t<img [src] = \"imageUrl\" />\n    \t\t\t<authors></authors>\n    \t\t\t<binding [title] = \"title\"></binding>\n    \t\t\t<favorite></favorite>\n    \t\t",
+                        template: "\n    \t\t\t<h1>{{ title }}</h1>\n    \t\t\t<img [src] = \"imageUrl\" />\n    \t\t\t<authors></authors>\n    \t\t\t<binding [bind-title] = \"title\"></binding>\n    \t\t\t<favorite [isFavorite] = \"post.isFavorite\"></favorite>\n    \t\t",
                         directives: [courses_component_1.CoursesComponent, authors_component_1.AuthorsComponent, binding_component_1.BindingComponent, favorite_component_1.FavoriteComponent]
                     }), 
                     __metadata('design:paramtypes', [])
