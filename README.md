@@ -332,10 +332,10 @@ This directive would be helpful for form validation.
 				})
 
 
-		ii.	Can list all inputs in one place as part of component metadata.  Good way to document a component, but if you refactor the code and change the property name, you will
-		have to change the name here as well.  This additional step
-		is not as efficient as using the @Input decorator above.
-	
+		ii.		This method is a good way to document a component, listing all the inputs in one place as part of the component's metadata.
+
+		iii.	But if you refactor the code and change the property, you will have to the change the property name here as well.  This additional step makes this method less efficient, less clean than the @Input decorator above.
+
 	d.	Aliases
 
 		i.	Can create an alias for the public name of the property
@@ -366,7 +366,17 @@ This directive would be helpful for form validation.
 		ii.	@Output() = new EventEmitter();
 
 
+### Templates
 
+1.	Okay to write templates inline if not too long.  But if the templates are large, better to separate the template from the component to maintain better separation of concerns.
+
+2.	Process
+
+	a.	Create a new HTML file for the favorite component:
+
+			favorite.template.html
+
+	b.	
 
 
 
