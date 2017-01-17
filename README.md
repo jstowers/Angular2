@@ -376,7 +376,21 @@ This directive would be helpful for form validation.
 
 			favorite.template.html
 
-	b.	
+	b.	Paste HTML in new file.
+
+	c.	Back in favorite.component.ts, replace template in @Component with templateUrl:
+
+			@Component({
+
+				selector: 'favorite',
+
+				templateUrl: 'app/favorite.template.html',
+
+				inputs: ['isFavorite']
+
+			})
+
+	d.	Can use template or templateUrl, but noth both!
 
 
 
