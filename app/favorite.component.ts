@@ -1,5 +1,5 @@
 // import Component from Ang2
-import {Component, Input} from 'angular2/core';
+import {Component, Input, Output, EventEmitter} from 'angular2/core';
 
 @Component({
 
@@ -11,18 +11,32 @@ import {Component, Input} from 'angular2/core';
 			[class.glyphicon-star] = "isFavorite"
 			(click) = "onClick()">
 		</i>
-	`
+	`,
+
+	inputs: ['isFavorite']
 
 })
 
 export class FavoriteComponent {
 
+	// input decorator
+	// @Input() 
+
+	// place input properties at beginning of component
+	// make them easy to find
+
+	// create EventEmitter()
+	@Output() change = new EventEmitter();
+
 	// initial value for favorite
-	@Input() isFavorite = false;
+	isFavorite = false;
 
 	// method toggles favorite on/off
 	onClick() {
 		this.isFavorite = !this.isFavorite;
+		this.change.emit({
+			newValue: this.isFavorite;
+		});
 	}
 
 }

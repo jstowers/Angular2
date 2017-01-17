@@ -30,13 +30,14 @@ Instructor: Mosh Hamedani (Udemy)
 
 ## Typescript Compilation
 
-Each .ts file has a .js and a js.map file
-
-	.js.map => used for debugging
+1. Each .ts file generates a .js and a js.map file
 
 	.js => eventually loaded in the browser
 
-.package.json
+	.js.map => used for debugging
+
+	
+2. package.json
 
 	"script.start"
 	includes a start script for concurrently running
@@ -45,7 +46,6 @@ Each .ts file has a .js and a js.map file
 
 	in watch mode, tsc will automatically generate .js.map
 	and .js files in the same folder
-
 
 
 ## Thursday, January 12, 2017
@@ -340,17 +340,30 @@ This directive would be helpful for form validation.
 
 		i.	Can create an alias for the public name of the property
 
-		ii.	Here, is-Favorite is the public name, while isFavorite is private:
+		ii.	Here, is-Favorite is the public name, while isFavorite the private name:
 
 				@Input('is-Favorite) isFavorite = false;
 
 				inputs: ['isFavorite:is-Favorite'];
 
 
+## Sunday, January 15, 2017
 
+### Output Properties
 
+1.	Custom Event
 
+		Every time the consumer clicks the favorite (star) icon, we want this to trigger a custom event.
 
+		@Output() change = new EventEmitter();
+
+2.	EventEmitter() is a class used to publish events
+
+3.	Two ways to write an ouput property:
+
+		i.	outputs: [  ]
+
+		ii.	@Output() = new EventEmitter();
 
 
 

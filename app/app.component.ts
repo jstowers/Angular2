@@ -19,7 +19,8 @@ import {FavoriteComponent} from './favorite.component';
     			<img [src] = "imageUrl" />
     			<authors></authors>
     			<binding [bind-title] = "title"></binding>
-    			<favorite [isFavorite] = "post.isFavorite"></favorite>
+    			<favorite [isFavorite] = "post.isFavorite" 
+    				(change) = onFavoriteChange($event) ></favorite>
     		`,
 
     directives: [CoursesComponent, AuthorsComponent, BindingComponent, FavoriteComponent]
@@ -38,6 +39,11 @@ export class AppComponent {
 	post = {
 		title: "Post Title",
 		isFavorite: true
+	};
+
+	// Example of logging the output from an event emitter on the favorite component
+	onFavoriteChange($event) {
+		console.log('$event', $event);
 	}
 	
 }

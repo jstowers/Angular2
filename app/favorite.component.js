@@ -20,21 +20,31 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         execute: function() {
             FavoriteComponent = (function () {
                 function FavoriteComponent() {
+                    // input decorator
+                    // @Input() 
+                    // place input properties at beginning of component
+                    // make them easy to find
+                    // create EventEmitter()
+                    this.change = new core_1.EventEmitter();
                     // initial value for favorite
                     this.isFavorite = false;
                 }
                 // method toggles favorite on/off
                 FavoriteComponent.prototype.onClick = function () {
                     this.isFavorite = !this.isFavorite;
+                    this.change.emit({
+                        newValue: this.isFavorite
+                    });
                 };
                 __decorate([
-                    core_1.Input(), 
+                    core_1.Output(), 
                     __metadata('design:type', Object)
-                ], FavoriteComponent.prototype, "isFavorite", void 0);
+                ], FavoriteComponent.prototype, "change", void 0);
                 FavoriteComponent = __decorate([
                     core_1.Component({
                         selector: 'favorite',
-                        template: "\n\t\t<i class = \"glyphicon\"\n\t\t\t[class.glyphicon-star-empty] = \"!isFavorite\"\n\t\t\t[class.glyphicon-star] = \"isFavorite\"\n\t\t\t(click) = \"onClick()\">\n\t\t</i>\n\t"
+                        template: "\n\t\t<i class = \"glyphicon\"\n\t\t\t[class.glyphicon-star-empty] = \"!isFavorite\"\n\t\t\t[class.glyphicon-star] = \"isFavorite\"\n\t\t\t(click) = \"onClick()\">\n\t\t</i>\n\t",
+                        inputs: ['isFavorite']
                     }), 
                     __metadata('design:paramtypes', [])
                 ], FavoriteComponent);
