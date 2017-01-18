@@ -1,4 +1,4 @@
-System.register(['angular2/core', './courses.component', './authors.component', './binding.component', './favorite.component'], function(exports_1, context_1) {
+System.register(['angular2/core', './courses.component', './authors.component', './binding.component', './favorite.component', './like.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', './courses.component', './authors.component', 
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, courses_component_1, authors_component_1, binding_component_1, favorite_component_1;
+    var core_1, courses_component_1, authors_component_1, binding_component_1, favorite_component_1, like_component_1;
     var AppComponent;
     return {
         setters:[
@@ -28,6 +28,9 @@ System.register(['angular2/core', './courses.component', './authors.component', 
             },
             function (favorite_component_1_1) {
                 favorite_component_1 = favorite_component_1_1;
+            },
+            function (like_component_1_1) {
+                like_component_1 = like_component_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
@@ -38,18 +41,23 @@ System.register(['angular2/core', './courses.component', './authors.component', 
                     // property in the <favorite> component
                     this.post = {
                         title: "Post Title",
-                        isFavorite: true
+                        isFavorite: true,
+                        likeCount: 10
                     };
                 }
                 // Example of logging the output from an event emitter on the favorite component
                 AppComponent.prototype.onFavoriteChange = function ($event) {
                     console.log('$event', $event);
                 };
+                AppComponent.prototype.onLikeChange = function ($event) {
+                    console.log('$event', $event);
+                };
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: "\n    \t\t\t<h1>{{ title }}</h1>\n    \t\t\t<img [src] = \"imageUrl\" />\n    \t\t\t<authors></authors>\n    \t\t\t<binding [bind-title] = \"title\"></binding>\n    \t\t\t<favorite [isFavorite] = \"post.isFavorite\" \n    \t\t\t\t(change) = onFavoriteChange($event) ></favorite>\n    \t\t",
-                        directives: [courses_component_1.CoursesComponent, authors_component_1.AuthorsComponent, binding_component_1.BindingComponent, favorite_component_1.FavoriteComponent]
+                        template: "\n    \t\t\t<h1>{{ title }}</h1>\n    \t\t\t<img [src] = \"imageUrl\" />\n    \t\t\t<authors></authors>\n    \t\t\t<binding [bind-title] = \"title\"></binding>\n    \t\t\t<favorite [isFavorite] = \"post.isFavorite\"\n    \t\t\t\t(change) = onFavoriteChange($event) ></favorite>\n    \t\t\t<like [likeCount] = \"post.likeCount\"\n    \t\t\t\t(change) = onLikeChange($event) ></like>\n     \t\t",
+                        directives: [courses_component_1.CoursesComponent, authors_component_1.AuthorsComponent, binding_component_1.BindingComponent, favorite_component_1.FavoriteComponent,
+                            like_component_1.LikeComponent]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);

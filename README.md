@@ -433,6 +433,12 @@ This directive would be helpful for form validation.
 			})
 
 
+### Homework: Like Component
+1.	Outline
+	a.	Use glyphicon-heart
+	b.	Default color is light gray: #ccc
+	c.	On mouse hover, cursor changes to a hand => css cursor: pointer
+
 
 
 

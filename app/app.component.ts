@@ -8,6 +8,7 @@ import {AuthorService} from './authors.service';
 
 import {BindingComponent} from './binding.component';
 import {FavoriteComponent} from './favorite.component';
+import {LikeComponent} from './like.component';
 
 
 @Component({
@@ -19,11 +20,14 @@ import {FavoriteComponent} from './favorite.component';
     			<img [src] = "imageUrl" />
     			<authors></authors>
     			<binding [bind-title] = "title"></binding>
-    			<favorite [isFavorite] = "post.isFavorite" 
+    			<favorite [isFavorite] = "post.isFavorite"
     				(change) = onFavoriteChange($event) ></favorite>
-    		`,
+    			<like [likeCount] = "post.likeCount"
+    				(change) = onLikeChange($event) ></like>
+     		`,
 
-    directives: [CoursesComponent, AuthorsComponent, BindingComponent, FavoriteComponent]
+    directives: [CoursesComponent, AuthorsComponent, BindingComponent, FavoriteComponent,
+    			LikeComponent]
 })
 
 // view component that takes control over entire app
@@ -38,11 +42,16 @@ export class AppComponent {
 	// property in the <favorite> component
 	post = {
 		title: "Post Title",
-		isFavorite: true
+		isFavorite: true,
+		likeCount: 10
 	};
 
 	// Example of logging the output from an event emitter on the favorite component
 	onFavoriteChange($event) {
+		console.log('$event', $event);
+	}
+
+	onLikeChange($event) {
 		console.log('$event', $event);
 	}
 	
