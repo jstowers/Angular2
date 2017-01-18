@@ -7,6 +7,8 @@ import {Component, Input, Output, EventEmitter} from 'angular2/core';
 
 	templateUrl: 'app/favorite.template.html',
 
+	styleUrls: ['app/favorite.component.css'],
+
 	inputs: ['isFavorite']
 
 })

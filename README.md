@@ -392,6 +392,45 @@ This directive would be helpful for form validation.
 
 	d.	Can use template or templateUrl, but noth both!
 
+3.	Additional HTTP request to download template file
+
+	a.	templateUrl adds 1 additional HTTP request to the page load.  But this only happens once.
+
+	b.	open DevTools => Network => and filter XHR
+
+	c.	it should show 
+
+
+## Tuesday, January 17, 2017
+
+### Styles
+1.	Overview
+
+	a.	Styles scoped only to the component, won't leak to outer HTML
+
+	b.	If reference outside 
+		
+2.	Two Places to Define Styles
+
+	a.	Styles property in @Component metadata:
+
+			@Component({
+
+				selector: . . .
+
+				styles: [ ]
+
+			})
+
+	b.	Reference external style sheets using styleUrls:
+
+			@Component({
+
+				selector: . . .
+
+				styleUrls: ['app/favorite.component.css']
+
+			})
 
 
 
