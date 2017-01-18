@@ -454,7 +454,11 @@ This directive would be helpful for form validation.
 	e.	If click down arrow, total votes decreased by one to original count.  Neither icon is highlighted (neutral vote)
 	f.	If click down arrow again, total votes decreased by one and arrow downvote icon is highlighted.
 
-3.	Greatest Complexity -> Greater Complexity -> Less Complexity
+3.	Divide and Conquer
+
+	a.	Break complex problems down into smaller, simpler problem
+	
+	b.	Greatest Complexity -> Greater Complexity -> Less Complexity
 
 4.	Process
 	a.	Render layout

@@ -57,10 +57,13 @@ System.register(['angular2/core', './courses.component', './authors.component', 
                 AppComponent.prototype.onLikeChange = function ($event) {
                     console.log('$event', $event);
                 };
+                AppComponent.prototype.onVoteChange = function ($event) {
+                    console.log('$event', $event);
+                };
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: "\n    \t\t\t<h1>{{ title }}</h1>\n    \t\t\t<img [src] = \"imageUrl\" />\n    \t\t\t<authors></authors>\n    \t\t\t<binding [bind-title] = \"title\"></binding>\n    \t\t\t<favorite [isFavorite] = \"post.isFavorite\"\n    \t\t\t\t(change) = onFavoriteChange($event) ></favorite>\n    \t\t\t<like [likeCount] = \"post.likeCount\"\n    \t\t\t\t  [iLike] = \"post.iLike\"\n    \t\t\t\t(change) = onLikeChange($event) >\n\t\t\t\t</like>\n\t\t\t\t<voter\n\t\t\t\t\t[voteCount] = \"post.voteCount\" >\n\t\t\t\t</voter>\n     \t\t",
+                        template: "\n    \t\t\t<h1>{{ title }}</h1>\n    \t\t\t<img [src] = \"imageUrl\" />\n    \t\t\t<authors></authors>\n    \t\t\t<binding [bind-title] = \"title\"></binding>\n    \t\t\t<favorite [isFavorite] = \"post.isFavorite\"\n    \t\t\t\t(change) = onFavoriteChange($event) ></favorite>\n    \t\t\t<like [likeCount] = \"post.likeCount\"\n    \t\t\t\t  [iLike] = \"post.iLike\"\n    \t\t\t\t(change) = onLikeChange($event) >\n\t\t\t\t</like>\n\t\t\t\t<voter\n\t\t\t\t\t[voteCount] = \"post.voteCount\" \n\t\t\t\t\t(vote) = onVoteChange($event) >\n\t\t\t\t</voter>\n     \t\t",
                         directives: [courses_component_1.CoursesComponent, authors_component_1.AuthorsComponent, binding_component_1.BindingComponent, favorite_component_1.FavoriteComponent,
                             like_component_1.LikeComponent, voter_component_1.VoterComponent]
                     }), 

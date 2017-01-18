@@ -1,5 +1,6 @@
 .voterFeature {
-	width: 10px;
+	width: 20px;
+	text-align: center;
 }
 
 .glyphicon-menu-up {
@@ -7,10 +8,19 @@
 }
 
 .votes {
-	font-size: 20px;
+	font-size: 16px;
 	color: blue;
+
+}
+
+.vote-button {
+	cursor: pointer;
 }
 
 .glyphicon-menu-down {
 	font-size: 20px;
+}
+
+.highlighted {
+	color: orange;
 }

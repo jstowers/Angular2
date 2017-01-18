@@ -28,7 +28,8 @@ import {VoterComponent} from './voter.component';
     				(change) = onLikeChange($event) >
 				</like>
 				<voter
-					[voteCount] = "post.voteCount" >
+					[voteCount] = "post.voteCount" 
+					(vote) = onVoteChange($event) >
 				</voter>
      		`,
 
@@ -60,6 +61,10 @@ export class AppComponent {
 	}
 
 	onLikeChange($event) {
+		console.log('$event', $event);
+	}
+
+	onVoteChange($event) {
 		console.log('$event', $event);
 	}
 	

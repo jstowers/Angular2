@@ -20,34 +20,41 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         execute: function() {
             VoterComponent = (function () {
                 function VoterComponent() {
-                    this.voteCount = 10;
+                    // initialize these properties to 0, in case 
+                    // they are not passed into the component
+                    this.voteCount = 0;
                     this.myVote = 0;
+                    this.vote = new core_1.EventEmitter();
                 }
                 VoterComponent.prototype.onUpvote = function () {
-                    if (this.myVote === -1) {
-                        this.voteCount += 1;
-                        this.myVote = 0;
+                    // can only upvote one time
+                    if (this.myVote === 1) {
+                        return;
                     }
-                    else if (this.myVote === 0) {
-                        this.voteCount += 1;
-                        this.myVote = 1;
+                    else {
+                        this.myVote++;
+                        this.voteCount++;
                     }
-                    else
-                        this.myVote = 1;
+                    this.vote.emit({
+                        myVote: this.myVote,
+                        voteCount: this.voteCount
+                    });
                     console.log('up myVote', this.myVote);
                     console.log('up voteCount', this.voteCount);
                 };
                 VoterComponent.prototype.onDownvote = function () {
-                    if (this.myVote === 1) {
-                        this.voteCount -= 1;
-                        this.myVote = 0;
+                    // can only downvote one time
+                    if (this.myVote === -1) {
+                        return;
                     }
-                    else if (this.myVote === 0) {
-                        this.voteCount -= 1;
-                        this.myVote = -1;
+                    else {
+                        this.myVote--;
+                        this.voteCount--;
                     }
-                    else
-                        this.myVote = -1;
+                    this.vote.emit({
+                        myVote: this.myVote,
+                        voteCount: this.voteCount
+                    });
                     console.log('down myVote', this.myVote);
                     console.log('down voteCount', this.voteCount);
                 };
@@ -59,11 +66,15 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                     core_1.Input(), 
                     __metadata('design:type', Object)
                 ], VoterComponent.prototype, "myVote", void 0);
+                __decorate([
+                    core_1.Output(), 
+                    __metadata('design:type', Object)
+                ], VoterComponent.prototype, "vote", void 0);
                 VoterComponent = __decorate([
                     core_1.Component({
                         selector: 'voter',
                         styleUrls: ['app/voter.component.css'],
-                        template: "\n\t\t\t<div class = \"voterFeature\">\n\n\t\t\t\t<i class = \"glyphicon glyphicon-menu-up\"\n\t\t\t\t\t(click) = onUpvote()>\n\t\t\t\t</i>\n\n\t\t\t\t<span class = \"votes\"> {{voteCount}} </span>\n\n\t\t\t\t<i class = \"glyphicon glyphicon-menu-down\"\n\t\t\t\t\t(click) = onDownvote()>\n\t\t\t\t</i>\n\n\t\t\t</div>\n\t"
+                        template: "\n\t\t\t<div class = \"voterFeature\">\n\n\t\t\t\t<i class = \"glyphicon glyphicon-menu-up vote-button\"\n\t\t\t\t\t(click) = onUpvote()\n\t\t\t\t\t[class.highlighted] = \"myVote === 1\">\n\t\t\t\t</i>\n\n\t\t\t\t<span class = \"votes\"> {{voteCount}} </span>\n\n\t\t\t\t<i class = \"glyphicon glyphicon-menu-down vote-button\"\n\t\t\t\t\t(click) = onDownvote()\n\t\t\t\t\t[class.highlighted] = \"myVote === -1\">\n\t\t\t\t</i>\n\n\t\t\t</div>\n\t"
                     }), 
                     __metadata('design:paramtypes', [])
                 ], VoterComponent);
