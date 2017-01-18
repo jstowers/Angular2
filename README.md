@@ -7,7 +7,7 @@ Instructor: Mosh Hamedani (Udemy)
 
 1.	Download the seed-beta
 
-2.	Load node
+2.	Load node package manager
 
 3.	Load typescript
 
@@ -441,7 +441,39 @@ This directive would be helpful for form validation.
 
 
 
+## Wednesday, January 18, 2017
 
+### Homework: Voter Comoponent
+1.	Overview
+	a.	Create a component to display the total votes as found on StackOverflow
+
+2.	Algorithm
+	a.	On mouse hover of up arrow, cursor changes to a hand.
+	b.	If click up arrow once, arrow icon is highlighted and total votes incremented by one.  
+	d.	If click up arrow again, nothing happens.  User can give one upvote or one downvote to a post.
+	e.	If click down arrow, total votes decreased by one to original count.  Neither icon is highlighted (neutral vote)
+	f.	If click down arrow again, total votes decreased by one and arrow downvote icon is highlighted.
+
+3.	Greatest Complexity -> Greater Complexity -> Less Complexity
+
+4.	Process
+	a.	Render layout
+	b.	Handle the clicks and calculate total votes
+	c.	Implement highlights to icons if match user votes (class styles)
+	d.	Implement one-vote implementation
+
+5.	Technical Tips
+	a.	Use glyphicon-menu-up and glyphicon-menu-down
+	b.	To achieve vertical layout, 
+		i.	Wrap elements in a <div> with a small width of 20px
+		ii.	<i> <span> <i>
+	d.	Public API
+		i.	Input properties to bind to
+			- voteCount => total votes
+			- myVote => 1 for positive, 0 for neutral, -1 for negative
+		ii.	Output property
+			- vote => event raised whenever user click up/downvote icons
+			- specify user's vote (1,0,-1)
 
 
 

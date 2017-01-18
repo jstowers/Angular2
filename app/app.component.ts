@@ -9,6 +9,7 @@ import {AuthorService} from './authors.service';
 import {BindingComponent} from './binding.component';
 import {FavoriteComponent} from './favorite.component';
 import {LikeComponent} from './like.component';
+import {VoterComponent} from './voter.component';
 
 
 @Component({
@@ -24,11 +25,15 @@ import {LikeComponent} from './like.component';
     				(change) = onFavoriteChange($event) ></favorite>
     			<like [likeCount] = "post.likeCount"
     				  [iLike] = "post.iLike"
-    				(change) = onLikeChange($event) ></like>
+    				(change) = onLikeChange($event) >
+				</like>
+				<voter
+					[voteCount] = "post.voteCount" >
+				</voter>
      		`,
 
     directives: [CoursesComponent, AuthorsComponent, BindingComponent, FavoriteComponent,
-    			LikeComponent]
+    			LikeComponent, VoterComponent]
 })
 
 // view component that takes control over entire app
@@ -45,6 +50,7 @@ export class AppComponent {
 		title: "Post Title",
 		isFavorite: true,
 		likeCount: 10,
+		voteCount: 10,
 		iLike: false
 	};
 
