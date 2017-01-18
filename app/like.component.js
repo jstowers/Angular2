@@ -21,20 +21,24 @@ System.register(['angular2/core'], function(exports_1, context_1) {
             LikeComponent = (function () {
                 function LikeComponent() {
                     this.change = new core_1.EventEmitter();
-                    this.totalLike = this.likeCount;
-                    this.iLike = false;
                 }
-                //likeCount = this.likeCount;
                 LikeComponent.prototype.onClick = function () {
                     this.iLike = !this.iLike;
+                    this.likeCount += this.iLike ? 1 : -1;
                     this.change.emit({
-                        totalLike: totalLike + 1
+                        iLike: this.iLike,
+                        likeCount: this.likeCount
                     });
                 };
+                ;
                 __decorate([
                     core_1.Input(), 
                     __metadata('design:type', Object)
-                ], LikeComponent.prototype, 'likeCount', void 0);
+                ], LikeComponent.prototype, "likeCount", void 0);
+                __decorate([
+                    core_1.Input(), 
+                    __metadata('design:type', Object)
+                ], LikeComponent.prototype, "iLike", void 0);
                 __decorate([
                     core_1.Output(), 
                     __metadata('design:type', Object)
@@ -43,7 +47,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                     core_1.Component({
                         selector: 'like',
                         templateUrl: 'app/like.template.html',
-                        styles: ["\n\t\t\t\t.glyphicon-heart {\n\t\t\t\t\tfont size: 50 px,\n\t\t\t\t\tcolor: #ccc,\n\t\t\t\t\tcursor: pointer;\n\t\t\t\t}\n\n\t\t\t \t.highlighted {\n\t\t\t \t\tcolor: deeppink;\n\t\t\t \t}\n\t\t\t"]
+                        styles: ["\n\t\t\t\t.glyphicon-heart {\n\t\t\t\t\tfont-size: 50px;\n\t\t\t\t\tcolor: #ccc;\n\t\t\t\t\tcursor: pointer;\n\t\t\t\t}\n\n\t\t\t \t.highlighted {\n\t\t\t \t\tcolor: deeppink;\n\t\t\t \t}\n\n\t\t\t \t.likes {\n\t\t\t \t\tdisplay: inline-block;\n\t\t\t \t\tfont-size: 20px;\n\t\t\t \t\tcolor: blue;\n\t\t\t \t}\n\t\t\t"]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], LikeComponent);

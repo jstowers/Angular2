@@ -8,35 +8,39 @@ import { Component, Input, Output, EventEmitter } from 'angular2/core';
 
 	styles: [`
 				.glyphicon-heart {
-					font size: 50 px,
-					color: #ccc,
+					font-size: 50px;
+					color: #ccc;
 					cursor: pointer;
 				}
 
 			 	.highlighted {
 			 		color: deeppink;
 			 	}
+
+			 	.likes {
+			 		display: inline-block;
+			 		font-size: 20px;
+			 		color: blue;
+			 	}
 			`]
 })
 
 export class LikeComponent {
 
-	@Input() 'likeCount';
+	// input properties bound to the app.component
+	@Input() likeCount;
+	@Input() iLike;
 
 	@Output() change = new EventEmitter();
 
-	totalLike = this.likeCount;
-	iLike = false;
-
-	//likeCount = this.likeCount;
-
 	onClick() {
+
 		this.iLike = !this.iLike;
+		this.likeCount += this.iLike ? 1 : -1;
+
 		this.change.emit({
-			totalLike: totalLike + 1;
-		})
-
-	}
-
-
+			iLike : this.iLike,
+			likeCount : this.likeCount
+		}
+	};
 }

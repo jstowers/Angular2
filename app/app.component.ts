@@ -23,6 +23,7 @@ import {LikeComponent} from './like.component';
     			<favorite [isFavorite] = "post.isFavorite"
     				(change) = onFavoriteChange($event) ></favorite>
     			<like [likeCount] = "post.likeCount"
+    				  [iLike] = "post.iLike"
     				(change) = onLikeChange($event) ></like>
      		`,
 
@@ -43,7 +44,8 @@ export class AppComponent {
 	post = {
 		title: "Post Title",
 		isFavorite: true,
-		likeCount: 10
+		likeCount: 10,
+		iLike: false
 	};
 
 	// Example of logging the output from an event emitter on the favorite component
