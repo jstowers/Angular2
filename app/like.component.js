@@ -22,16 +22,17 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                 function LikeComponent() {
                     this.change = new core_1.EventEmitter();
                     this.totalLike = this.likeCount;
+                    this.iLike = false;
                 }
                 //likeCount = this.likeCount;
                 LikeComponent.prototype.onClick = function () {
-                    this.like = !this.like;
+                    this.iLike = !this.iLike;
                     this.change.emit({
                         totalLike: totalLike + 1
                     });
                 };
                 __decorate([
-                    Input(), 
+                    core_1.Input(), 
                     __metadata('design:type', Object)
                 ], LikeComponent.prototype, 'likeCount', void 0);
                 __decorate([
@@ -41,8 +42,8 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                 LikeComponent = __decorate([
                     core_1.Component({
                         selector: 'like',
-                        template: 'like.template.html',
-                        styles: ["\n\t\t\t\t.glyphicon-heart {\n\t\t\t\t\tcolor: #ccc,\n\t\t\t\t\tcursor: pointer;\n\t\t\t\t}\n\n\t\t\t \t.highlighted {\n\t\t\t \t\tcolor: deeppink;\n\t\t\t \t}\n\t\t\t"]
+                        templateUrl: 'app/like.template.html',
+                        styles: ["\n\t\t\t\t.glyphicon-heart {\n\t\t\t\t\tfont size: 50 px,\n\t\t\t\t\tcolor: #ccc,\n\t\t\t\t\tcursor: pointer;\n\t\t\t\t}\n\n\t\t\t \t.highlighted {\n\t\t\t \t\tcolor: deeppink;\n\t\t\t \t}\n\t\t\t"]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], LikeComponent);
