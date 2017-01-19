@@ -43,6 +43,7 @@ System.register(['angular2/core', './courses.component', './authors.component', 
                 function AppComponent() {
                     //title = "My First Angular 2 App";
                     this.title = "My First Twitter App";
+                    this.author = "Joe Stowers";
                     this.imageUrl = "http://lorempixel.com/200/200/people?1";
                     // can bind post.isFavorite property value to our isFavorite
                     // property in the <favorite> component
@@ -68,7 +69,7 @@ System.register(['angular2/core', './courses.component', './authors.component', 
                     core_1.Component({
                         selector: 'my-app',
                         styleUrls: ['app/app.component.css'],
-                        template: "\n    \t\t<div class = 'app-main' >\n    \t\t\t<h1> {{ title }} </h1>\n    \t\t\t<tweet></tweet>\n\t\t\t</div>\n    \t",
+                        template: "\n    \t\t<div class = 'app-main' >\n    \t\t\t<h1>{{ title }}</h1>\n    \t\t\t<h2>{{ author }}</h2>\n    \t\t\t<tweet></tweet>\n\t\t\t</div>\n    \t",
                         /*
                         template: `
                                     <h1>{{ title }}</h1>

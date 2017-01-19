@@ -22,7 +22,8 @@ import {TweetComponent} from './tweet.component';
 
     template: `
     		<div class = 'app-main' >
-    			<h1> {{ title }} </h1>
+    			<h1>{{ title }}</h1>
+    			<h2>{{ author }}</h2>
     			<tweet></tweet>
 			</div>
     	`,
@@ -58,6 +59,8 @@ export class AppComponent {
 
 	//title = "My First Angular 2 App";
 	title = "My First Twitter App";
+
+	author = "Joe Stowers";
 	
 	imageUrl = "http://lorempixel.com/200/200/people?1";
 

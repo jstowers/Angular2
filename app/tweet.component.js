@@ -26,7 +26,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                     core_1.Component({
                         selector: 'tweet',
                         styleUrls: ['app/tweet.component.css'],
-                        template: "\n\t\t<div class = \"main\" >\n\n\t\t\t<h2>{{author}}</h2>\n\n\t\t</div>\n\t"
+                        template: "\n\t\t<div class = \"main\" >\n\t\t\n\t\t\t<div class=\"media\">\n\t\t\t  \t<div class=\"media-left\">\n\t\t\t    \t<a href=\"#\">\n\t\t\t      \t\t<img class=\"media-object\" src=\"http://lorempixel.com/200/200/people?1\" alt=\"TEST\">\n\t\t\t    \t</a>\n\t\t\t  \t</div>\n\t\t\t  \t<div class=\"media-body\">\n\t\t\t    \t<h4 class=\"media-heading\">Media Heading</h4>\n\t\t\t  \t</div>\n\t\t\t</div>\n\t\t</div>\n\t"
                     }), 
                     __metadata('design:paramtypes', [])
                 ], TweetComponent);
