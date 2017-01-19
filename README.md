@@ -86,8 +86,7 @@ Will implement component, directive, and service from scratch
 
 2.	CoursesComponent should only contain logic for the view.
 
-3.	Any logic that is NOT about the view should be written in a separate class called
-	a service.
+3.	Any logic that is NOT about the view should be written in a separate class called a service.
 
 4.	Create a new file called course.service.ts
 
