@@ -1,4 +1,4 @@
-System.register(['angular2/core', './courses.component', './authors.component', './binding.component', './favorite.component', './like.component', './voter.component'], function(exports_1, context_1) {
+System.register(['angular2/core', './courses.component', './authors.component', './binding.component', './favorite.component', './like.component', './voter.component', './tweet.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', './courses.component', './authors.component', 
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, courses_component_1, authors_component_1, binding_component_1, favorite_component_1, like_component_1, voter_component_1;
+    var core_1, courses_component_1, authors_component_1, binding_component_1, favorite_component_1, like_component_1, voter_component_1, tweet_component_1;
     var AppComponent;
     return {
         setters:[
@@ -34,12 +34,16 @@ System.register(['angular2/core', './courses.component', './authors.component', 
             },
             function (voter_component_1_1) {
                 voter_component_1 = voter_component_1_1;
+            },
+            function (tweet_component_1_1) {
+                tweet_component_1 = tweet_component_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
                 function AppComponent() {
-                    this.title = "My First Angular 2 App";
-                    this.imageUrl = "http://lorempixel.com/400/200/";
+                    //title = "My First Angular 2 App";
+                    this.title = "My First Twitter App";
+                    this.imageUrl = "http://lorempixel.com/200/200/people?1";
                     // can bind post.isFavorite property value to our isFavorite
                     // property in the <favorite> component
                     this.post = {
@@ -63,9 +67,30 @@ System.register(['angular2/core', './courses.component', './authors.component', 
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: "\n    \t\t\t<h1>{{ title }}</h1>\n    \t\t\t<img [src] = \"imageUrl\" />\n    \t\t\t<authors></authors>\n    \t\t\t<binding [bind-title] = \"title\"></binding>\n    \t\t\t<favorite [isFavorite] = \"post.isFavorite\"\n    \t\t\t\t(change) = onFavoriteChange($event) ></favorite>\n    \t\t\t<like [likeCount] = \"post.likeCount\"\n    \t\t\t\t  [iLike] = \"post.iLike\"\n    \t\t\t\t(change) = onLikeChange($event) >\n\t\t\t\t</like>\n\t\t\t\t<voter\n\t\t\t\t\t[voteCount] = \"post.voteCount\" \n\t\t\t\t\t(vote) = onVoteChange($event) >\n\t\t\t\t</voter>\n     \t\t",
+                        styleUrls: ['app/app.component.css'],
+                        template: "\n    \t\t<div class = 'app-main' >\n    \t\t\t<h1> {{ title }} </h1>\n    \t\t\t<tweet></tweet>\n\t\t\t</div>\n    \t",
+                        /*
+                        template: `
+                                    <h1>{{ title }}</h1>
+                                    <img [src] = "imageUrl" />
+                                    <authors></authors>
+                                    <binding [bind-title] = "title"></binding>
+                                    <favorite [isFavorite] = "post.isFavorite"
+                                        (change) = onFavoriteChange($event) ></favorite>
+                    
+                                    <like [likeCount] = "post.likeCount"
+                                          [iLike] = "post.iLike"
+                                        (change) = onLikeChange($event) >
+                                    </like>
+                    
+                                    <voter
+                                        [voteCount] = "post.voteCount"
+                                        (vote) = onVoteChange($event) >
+                                    </voter>
+                                `,
+                        */
                         directives: [courses_component_1.CoursesComponent, authors_component_1.AuthorsComponent, binding_component_1.BindingComponent, favorite_component_1.FavoriteComponent,
-                            like_component_1.LikeComponent, voter_component_1.VoterComponent]
+                            like_component_1.LikeComponent, voter_component_1.VoterComponent, tweet_component_1.TweetComponent]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);

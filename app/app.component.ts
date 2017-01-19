@@ -11,11 +11,23 @@ import {FavoriteComponent} from './favorite.component';
 import {LikeComponent} from './like.component';
 import {VoterComponent} from './voter.component';
 
+import {TweetComponent} from './tweet.component';
+
 
 @Component({
 
     selector: 'my-app',
 
+    styleUrls: ['app/app.component.css'],
+
+    template: `
+    		<div class = 'app-main' >
+    			<h1> {{ title }} </h1>
+    			<tweet></tweet>
+			</div>
+    	`,
+
+    /*
     template: `
     			<h1>{{ title }}</h1>
     			<img [src] = "imageUrl" />
@@ -23,27 +35,31 @@ import {VoterComponent} from './voter.component';
     			<binding [bind-title] = "title"></binding>
     			<favorite [isFavorite] = "post.isFavorite"
     				(change) = onFavoriteChange($event) ></favorite>
+
     			<like [likeCount] = "post.likeCount"
     				  [iLike] = "post.iLike"
     				(change) = onLikeChange($event) >
 				</like>
+
 				<voter
 					[voteCount] = "post.voteCount" 
 					(vote) = onVoteChange($event) >
 				</voter>
      		`,
+	*/
 
     directives: [CoursesComponent, AuthorsComponent, BindingComponent, FavoriteComponent,
-    			LikeComponent, VoterComponent]
+    			LikeComponent, VoterComponent, TweetComponent]
 })
 
 // view component that takes control over entire app
 // lorempixel.com displays random photos to test your app template
 export class AppComponent {
 
-	title = "My First Angular 2 App";
+	//title = "My First Angular 2 App";
+	title = "My First Twitter App";
 	
-	imageUrl = "http://lorempixel.com/400/200/";
+	imageUrl = "http://lorempixel.com/200/200/people?1";
 
 	// can bind post.isFavorite property value to our isFavorite
 	// property in the <favorite> component

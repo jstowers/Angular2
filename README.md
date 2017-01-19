@@ -481,6 +481,25 @@ This directive would be helpful for form validation.
 			- specify user's vote (1,0,-1)
 
 
+### Challenge: Tweet Component
+1.  TO DO
+	a.	Create a Tweet Component
+		i.		Image
+		ii.		Author
+		iii.	Twitter Handle
+		iv.		Tweet
+		v.		Like button (reuse like component)
+	b.	Use bootstrap Media Object as template for Tweets
+	c.	Create a service that is responsible for returning a list of tweets.
+	d.	Hard-code an object of tweets for now {url, author, message}
+			http://lorempixel.com/100/100/people?1
+	e.	Use dependency injection to inject service into component
+	f.	Use *ngFor directive to render the tweets
+			<div *ngFor = "#course of courses">
+			</div>
+
+
+
 
 
 
