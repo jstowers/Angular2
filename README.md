@@ -445,6 +445,7 @@ This directive would be helpful for form validation.
 
 ### Homework: Voter Comoponent
 1.	Overview
+	
 	a.	Create a component to display the total votes as found on StackOverflow
 
 2.	Algorithm
@@ -457,7 +458,7 @@ This directive would be helpful for form validation.
 3.	Divide and Conquer
 
 	a.	Break complex problems down into smaller, simpler problem
-	
+
 	b.	Greatest Complexity -> Greater Complexity -> Less Complexity
 
 4.	Process
