@@ -19,10 +19,9 @@ System.register([], function(exports_1, context_1) {
                         {
                             author: 'President Obama',
                             handle: '@POTUS',
-                            image: 'http://lorempixel.com/200/200/people?1',
+                            image: 'http://lorempixel.com/200/200/people?2',
                             message: 'Thank you for everything. My last ask is the same as my first. I\'m asking you to believe—not in my ability to create change, but in yours.'
-                        }
-                    ];
+                        }];
                 };
                 return TweetService;
             }());
