@@ -17,13 +17,11 @@ Instructor: Mosh Hamedani (Udemy)
 
 ## Getting Started
 
-1.	In the console, type the following to start the lite server:
+1.	To start the node lite-server and launch the default Chrome browser, type the following in the console:
 
 		$ npm start
 
-		launches default browser (Chrome)
-
-2.	in browser, type:
+2.	To open the app, type the following in the Chrome browser:
 
 		localhost:3000
 
