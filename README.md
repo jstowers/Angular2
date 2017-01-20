@@ -471,7 +471,7 @@ This directive would be helpful for form validation.
 	a.	Use glyphicon-menu-up and glyphicon-menu-down
 
 	b.	To achieve vertical layout:
-		i.	Wrap elements in a "<div>" with a small width of 20px
+		i.	Wrap elements in a div with a small width of 20px
 		ii.	Use the following elements: '<i> <span> <i>'
 	
 	c.	Public API
