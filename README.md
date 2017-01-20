@@ -559,8 +559,7 @@ Conclusion:
 > 	But for apps with large element trees, *ngIf works better.  Hiding unnecessary elements in the DOM takes substantial memory and computing resources.
 > 
 > 	Exception:
-> 	
-	If your element tree will be repeatedly removed and inserted in the DOM when a user clicks a checkbox or button, then using the [hidden] attribute may be more efficient.  In this case, using *ngIf may actually consume more resources.	
+> 	If your element tree will be repeatedly removed and inserted in the DOM when a user clicks a checkbox or button, then using the [hidden] attribute may be more efficient.  In this case, using *ngIf may actually consume more resources.	
 
 
 **ngSwitch**
