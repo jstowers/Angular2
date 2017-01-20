@@ -460,16 +460,21 @@ This directive would be helpful for form validation.
 
 4.	Process
 	a.	Render layout
+
 	b.	Handle the clicks and calculate total votes
+	
 	c.	Implement highlights to icons if match user votes (class styles)
+	
 	d.	Implement one-vote implementation
 
 5.	Technical Tips
 	a.	Use glyphicon-menu-up and glyphicon-menu-down
-	b.	To achieve vertical layout, 
-		i.	Wrap elements in a <div> with a small width of 20px
-		ii.	<i> <span> <i>
-	d.	Public API
+
+	b.	To achieve vertical layout:
+		i.	Wrap elements in a '<div>' with a small width of 20px
+		ii.	Use the following elements: '<i> <span> <i>'
+	
+	c.	Public API
 		i.	Input properties to bind to
 			- voteCount => total votes
 			- myVote => 1 for positive, 0 for neutral, -1 for negative
@@ -493,8 +498,8 @@ This directive would be helpful for form validation.
 			http://lorempixel.com/100/100/people?1
 	e.	Use dependency injection to inject service into component
 	f.	Use *ngFor directive to render the tweets
-			<div *ngFor = "#course of courses">
-			</div>
+			'<div *ngFor = "#course of courses">
+			</div>'
 			
 
 
