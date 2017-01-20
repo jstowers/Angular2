@@ -1,14 +1,18 @@
 
-
-h2 {
-
-	/*
-	color: rgb(255, 222, 0); /* John Deere Yellow */
-
-	/* Faux Black outline around letters
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
-}
-
-.main {
+.media {
 	margin-left: 20px;
+	margin-bottom: 20px;
 }
+
+.media-object {
+	border-radius: 10px;
+}
+
+.media-heading {
+	color:black;
+}
+
+.tweet-handle {
+	color:blue;
+}
+

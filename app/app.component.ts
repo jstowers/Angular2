@@ -12,6 +12,7 @@ import {LikeComponent} from './like.component';
 import {VoterComponent} from './voter.component';
 
 import {TweetComponent} from './tweet.component';
+import {TweetsComponent} from './tweets.component';
 
 
 @Component({
@@ -24,7 +25,7 @@ import {TweetComponent} from './tweet.component';
     		<div class = 'app-main' >
     			<h1>{{ title }}</h1>
     			<h2>{{ author }}</h2>
-    			<tweet></tweet>
+    			<tweets></tweets>
 			</div>
     	`,
 
@@ -50,7 +51,7 @@ import {TweetComponent} from './tweet.component';
 	*/
 
     directives: [CoursesComponent, AuthorsComponent, BindingComponent, FavoriteComponent,
-    			LikeComponent, VoterComponent, TweetComponent]
+    			LikeComponent, VoterComponent, TweetComponent, TweetsComponent]
 })
 
 // view component that takes control over entire app
