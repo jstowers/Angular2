@@ -9,10 +9,12 @@
 }
 
 .media-heading {
-	color:black;
+	color:blue;
+	font-size:22px;
 }
 
 .tweet-handle {
-	color:blue;
+	font-size:16px;
+	color: 778899;
 }
 

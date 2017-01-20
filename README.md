@@ -480,6 +480,7 @@ This directive would be helpful for form validation.
 			- specify user's vote (1,0,-1)
 
 
+## Thursday, January 19, 2017
 ### Challenge: Tweet Component
 1.  TO DO
 	a.	Create a Tweet Component
@@ -496,6 +497,7 @@ This directive would be helpful for form validation.
 	f.	Use *ngFor directive to render the tweets
 			<div *ngFor = "#course of courses">
 			</div>
+			
 
 
 

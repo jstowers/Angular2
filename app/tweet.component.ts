@@ -1,5 +1,7 @@
 import { Component, Input } from 'angular2/core';
 
+import { LikeComponent } from './like.component';
+
 // TweetComponent generates the basic rendering template
 // for each tweet.
 
@@ -22,21 +24,30 @@ import { Component, Input } from 'angular2/core';
 	  				<span class = "tweet-handle"> {{ data.handle }} </span>
   				</h4>
 	  			{{ data.message }}
+	  			<div class = "like-body">
+		  			<like [likeCount] = "data.likeCount"
+	    				  [iLike] = "data.iLike"
+	    				(change) = onLikeChange($event) >
+					</like>
+	  			</div>
 	  		</div>
 		</div>
 	`,
+
+	directives: [LikeComponent]
 })
 
 export class TweetComponent {
 
+	@Input() data;
+
 	// Not sure why Mosh added this here?
 	// this.data = undefined
-	/*
 	constructor() {
 		console.log('TweetComponent data', this.data);
 	}
-	*/
+	
+	
 
-	@Input() data;
 
 }
