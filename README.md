@@ -522,16 +522,32 @@ This directive would be helpful for form validation.
 ### Additional Directives (Sec. 5, Lec. 49)
 
 **ngIf**
+
+>Method 1:	
 >	If the statement evaluates to "truthy," the `<div>` and its children will be inserted into the DOM:
 >	
 >			<div *ngIf = "courses.length > 0" >
 >				List of courses
 >			</div>
+>			<div *ngIf = "courses.length == 0" >
+>				You don't have any courses selected.
+>			</div>
 >
 >	If the statement evaluates to "falsey," the `<div>` will be removed from the DOM.
 
+>Method 2:	
+>	We can bind to the hidden property of a DOM element.  The hidden attribute is a Boolean attribute indicating that the element is not yet, or no longer, relevant.  If the array of courses is empty, the following will occur:
+>	
+>			// hidden => true
+>			<div [hidden] = "courses.length == 0" >
+>				List of courses
+>			</div>
+>			// hidden => false
+>			<div [hidden] = "courses.length > 0" >
+>				You don't have any courses selected yet
+>			</div>
 
-
+		
 
 
 
