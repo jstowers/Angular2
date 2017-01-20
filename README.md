@@ -517,7 +517,17 @@ This directive would be helpful for form validation.
 	 				'<div *ngFor = "#course of courses">
 	 				</div>'
 
-### 
+### Additional Directives (Sec. 5, Lec. 49)
+
+**ngIf**
+>	If the statement evaluates to "truthy," the <div> and its children will be inserted into the DOM:
+>	
+>			<div *ngIf = "courses.length > 0"
+>				List of courses
+>			</div>
+>
+>	If the statement evaluates to "falsey," the <div> will be removed from the DOM.
+
 
 
 
