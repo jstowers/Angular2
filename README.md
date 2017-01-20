@@ -536,7 +536,9 @@ This directive would be helpful for form validation.
 >	If the statement evaluates to "falsey," the `<div>` will be removed from the DOM.
 
 >Method 2:	
->	We can bind to the hidden property of a DOM element.  The hidden attribute is a Boolean attribute indicating that the element is not yet, or no longer, relevant.  If the array of courses is empty, the following will occur:
+>	We can bind to the hidden property of a DOM element.  The hidden attribute is a Boolean attribute indicating that the element is not yet, or no longer, relevant.
+>	
+>	In this example, if the courses array is empty, the first `<div>` will be hidden and the second `<div>` will be shown:
 >	
 >			// hidden => true
 >			<div [hidden] = "courses.length == 0" >
