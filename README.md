@@ -535,6 +535,7 @@ This directive would be helpful for form validation.
 >
 >	If the statement evaluates to "falsey," the `<div>` will be removed from the DOM.
 
+
 >Method 2:	
 >	We can bind to the hidden property of a DOM element.  The hidden attribute is a Boolean attribute indicating that the element is not yet, or no longer, relevant.
 >	
@@ -548,8 +549,23 @@ This directive would be helpful for form validation.
 >			<div [hidden] = "courses.length > 0" >
 >				You don't have any courses selected yet
 >			</div>
+>	
+	With Method 2, the hidden `<div>` element will stay in the DOM, it just won't be displayed.  This method is perfect for small element trees.
 
-		
+
+Conclusion:
+
+	The [hidden] attribute works fine for small element trees.  
+
+	But for apps with large element trees, *ngIf works better.  Hiding unnecessary elements in the DOM takes substantial memory and computing resources.
+
+	Exception:
+		If your element tree will be repeatedly removed and inserted in the DOM when a user clicks a checkbox or button, then using the [hidden] attribute may be more efficient.  In this case, using *ngIf may actually consume more resources.
+
+
+**ngSwitch**
+
+To display an element and its children from a set of possible elements, based on a condition.
 
 
 
