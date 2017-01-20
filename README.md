@@ -514,15 +514,17 @@ This directive would be helpful for form validation.
 	 	f.	Use dependency injection to inject service into component
 	 	
 	 	g.	Use *ngFor directive to render the tweets:
-	 				'<div *ngFor = "#course of courses">
-	 				</div>'
+	 				`<div *ngFor = "#course of courses">
+	 				</div>`
+
+***
 
 ### Additional Directives (Sec. 5, Lec. 49)
 
 **ngIf**
 >	If the statement evaluates to "truthy," the `<div>` and its children will be inserted into the DOM:
 >	
->			<div *ngIf = "courses.length > 0"
+>			<div *ngIf = "courses.length > 0" >
 >				List of courses
 >			</div>
 >
