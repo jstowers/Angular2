@@ -5,13 +5,13 @@ Instructor: Mosh Hamedani (Udemy)
 
 ## Setting Up the Development Environment
 
-1.	Download the seed-beta
-
-2.	Load node package manager
-
-3.	Load typescript
-
-4.  Load typings
+> 1.	Download the seed-beta
+> 
+> 2.	Load node package manager
+> 
+> 3.	Load typescript
+> 
+> 4.  	Load typings
 
 
 
