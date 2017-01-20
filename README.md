@@ -444,24 +444,25 @@ This directive would be helpful for form validation.
 
 1.	Overview
 	
-	Create a component to display the total votes as found on StackOverflow.
+		Create a component to display the total votes as found on StackOverflow.
 
 2.	Algorithm
+
 		a.	On mouse hover of up arrow, cursor changes to a hand.
 
-		b.	If click up arrow once, arrow icon is highlighted and total votes incremented by one.
+		b.	If click up arrow once, up arrow icon is highlighted and total votes incremented by one.
 
-		c.	If click up arrow again, nothing happens.  User can give one upvote or one downvote to a post.
+		c.	If click up arrow again, nothing happens.  User can only give one upvote or one downvote to a post.
 
-		d.	If click down arrow, total votes decreased by one to original count.  Neither icon is highlighted (neutral vote).
+		d.	If click down arrow, total votes decreased by one to original count.  Neither arrow icon is highlighted (neutral vote).
 
-		e.	If click down arrow again, total votes decreased by one and arrow downvote icon is highlighted.
+		e.	If click down arrow again, total votes decreased by one and down arrow icon is highlighted.
 
 3.	Divide and Conquer
 
-		a.	Break complex problems down into smaller, simpler problem
+		a.	Break down a complex problem into smaller, simpler problems
 
-		b.	Greatest Complexity -> Greater Complexity -> Less Complexity
+		b.	Most Complexity -> More Complexity -> Less Complexity
 
 4.	Process
 
@@ -471,7 +472,7 @@ This directive would be helpful for form validation.
 		
 		c.	Implement highlights to icons if match user votes (class styles)
 		
-		d.	Implement one-vote implementation
+		d.	Implement one-vote limitation
 
 5.	Technical Tips
 
