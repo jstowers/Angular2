@@ -15,6 +15,7 @@ import {TweetComponent} from './tweet.component';
 import {TweetsComponent} from './tweets.component';
 
 import {PptybindComponent} from './pptybind.component';
+import {SwitchComponent} from './ngswitch.component';
 
 
 @Component({
@@ -27,7 +28,7 @@ import {PptybindComponent} from './pptybind.component';
     		<div class = 'app-main' >
     			<h1>{{ title }}</h1>
     			<h2>{{ author }}</h2>
-    			<pptybind></pptybind>
+    			<switch></switch>
 			</div>
     	`,
 
@@ -50,11 +51,13 @@ import {PptybindComponent} from './pptybind.component';
 					(vote) = onVoteChange($event) >
 				</voter>
 				<tweets></tweets>
+				<pptybind></pptybind>
      		`,
 	*/
 
     directives: [CoursesComponent, AuthorsComponent, BindingComponent, FavoriteComponent,
-    			LikeComponent, VoterComponent, TweetComponent, TweetsComponent, PptybindComponent]
+    			LikeComponent, VoterComponent, TweetComponent, TweetsComponent, PptybindComponent,
+    			SwitchComponent]
 })
 
 // view component that takes control over entire app
@@ -67,6 +70,11 @@ export class AppComponent {
 	author = "Joe Stowers";
 	
 	imageUrl = "http://lorempixel.com/200/200/people?1";
+
+
+	// 
+
+
 
 	// can bind post.isFavorite property value to our isFavorite
 	// property in the <favorite> component
