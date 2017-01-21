@@ -564,7 +564,9 @@ Conclusion:
 
 **ngSwitch**
 
-To display an element and its children from a set of possible elements, based on a condition.
+Purpose:	To display an element and its children from a set of possible elements, based on a condition.
+
+
 
 
 
