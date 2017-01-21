@@ -14,6 +14,8 @@ import {VoterComponent} from './voter.component';
 import {TweetComponent} from './tweet.component';
 import {TweetsComponent} from './tweets.component';
 
+import {PptybindComponent} from './pptybind.component';
+
 
 @Component({
 
@@ -25,7 +27,7 @@ import {TweetsComponent} from './tweets.component';
     		<div class = 'app-main' >
     			<h1>{{ title }}</h1>
     			<h2>{{ author }}</h2>
-    			<tweets></tweets>
+    			<pptybind></pptybind>
 			</div>
     	`,
 
@@ -47,11 +49,12 @@ import {TweetsComponent} from './tweets.component';
 					[voteCount] = "post.voteCount" 
 					(vote) = onVoteChange($event) >
 				</voter>
+				<tweets></tweets>
      		`,
 	*/
 
     directives: [CoursesComponent, AuthorsComponent, BindingComponent, FavoriteComponent,
-    			LikeComponent, VoterComponent, TweetComponent, TweetsComponent]
+    			LikeComponent, VoterComponent, TweetComponent, TweetsComponent, PptybindComponent]
 })
 
 // view component that takes control over entire app

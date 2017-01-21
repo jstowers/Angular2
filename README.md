@@ -170,7 +170,39 @@ This directive would be helpful for form validation.
 
 	If the property changes in the component, the DOM element will be updated.  But any changes in the DOM are not reflected back to the component. 
 
-4.	Two Property Binding Syntaxes
+4.	Availability
+
+		a.	DOM properties and events
+
+				< img [src] = "...">
+
+				<img [click] = "...">
+
+		b.	Angular2 directive properties and events
+
+				<div [ngClass] = "...">
+
+				<div (ngSubmit) = "...">
+
+		c.	Component properties and events (components are directives)
+
+				<cmp [initObj] = "...">
+
+				<cmp (rndEvent) = "...">
+
+5.	Custom Bindings for directives and components
+
+		i.	Property binding
+
+				@Input() propertyName : string;
+
+
+		ii.	Event binding
+
+				@Output() eventName = newEventEmitter();
+
+
+Two Property Binding Syntaxes
 
 		a.	<img [src] = "imageUrl" />
 

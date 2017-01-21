@@ -1,4 +1,4 @@
-System.register(['angular2/core', './courses.component', './authors.component', './binding.component', './favorite.component', './like.component', './voter.component', './tweet.component', './tweets.component'], function(exports_1, context_1) {
+System.register(['angular2/core', './courses.component', './authors.component', './binding.component', './favorite.component', './like.component', './voter.component', './tweet.component', './tweets.component', './pptybind.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', './courses.component', './authors.component', 
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, courses_component_1, authors_component_1, binding_component_1, favorite_component_1, like_component_1, voter_component_1, tweet_component_1, tweets_component_1;
+    var core_1, courses_component_1, authors_component_1, binding_component_1, favorite_component_1, like_component_1, voter_component_1, tweet_component_1, tweets_component_1, pptybind_component_1;
     var AppComponent;
     return {
         setters:[
@@ -40,6 +40,9 @@ System.register(['angular2/core', './courses.component', './authors.component', 
             },
             function (tweets_component_1_1) {
                 tweets_component_1 = tweets_component_1_1;
+            },
+            function (pptybind_component_1_1) {
+                pptybind_component_1 = pptybind_component_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
@@ -72,7 +75,7 @@ System.register(['angular2/core', './courses.component', './authors.component', 
                     core_1.Component({
                         selector: 'my-app',
                         styleUrls: ['app/app.component.css'],
-                        template: "\n    \t\t<div class = 'app-main' >\n    \t\t\t<h1>{{ title }}</h1>\n    \t\t\t<h2>{{ author }}</h2>\n    \t\t\t<tweets></tweets>\n\t\t\t</div>\n    \t",
+                        template: "\n    \t\t<div class = 'app-main' >\n    \t\t\t<h1>{{ title }}</h1>\n    \t\t\t<h2>{{ author }}</h2>\n    \t\t\t<pptybind></pptybind>\n\t\t\t</div>\n    \t",
                         /*
                         template: `
                                     <h1>{{ title }}</h1>
@@ -91,10 +94,11 @@ System.register(['angular2/core', './courses.component', './authors.component', 
                                         [voteCount] = "post.voteCount"
                                         (vote) = onVoteChange($event) >
                                     </voter>
+                                    <tweets></tweets>
                                 `,
                         */
                         directives: [courses_component_1.CoursesComponent, authors_component_1.AuthorsComponent, binding_component_1.BindingComponent, favorite_component_1.FavoriteComponent,
-                            like_component_1.LikeComponent, voter_component_1.VoterComponent, tweet_component_1.TweetComponent, tweets_component_1.TweetsComponent]
+                            like_component_1.LikeComponent, voter_component_1.VoterComponent, tweet_component_1.TweetComponent, tweets_component_1.TweetsComponent, pptybind_component_1.PptybindComponent]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
