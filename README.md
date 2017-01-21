@@ -151,10 +151,22 @@ Implemented an attribute directive that utilizes the onFocus() and onBlur() even
 This directive would be helpful for form validation.
 
 
+### Databinding Overview
+
+	Databinding = Communication
+
+						   ------ passes data ------>     
+	Component Body/Logic							  Component Template (view)
+						   <--- listens to events ---
+
 ### Property Binding  (Sec. 3, Lec. 25)
 
-1.	Interpolation 
+1.	String Interpolation 
 
+		Syntax:
+		{{ expression resolving to a string }}
+
+		Examples:
 		<h1> {{ title }} </h1>
 		<img src = "{{ imageUrl }}" />
 
@@ -164,23 +176,52 @@ This directive would be helpful for form validation.
 
 2.	What is Property Binding?
 
-	Binding the property in a component to a property of a DOM element.  Property binding works one way, from component to the DOM.
+		Binding = sending data
 
-		Component (with its properties) -----> DOM 
+		Property binding = sending data to a property of a DOM element
 
-	If the property changes in the component, the DOM element will be updated.  But any changes in the DOM are not reflected back to the component. 
+		Example:
+		`<button [disabled] = "expression resolving to required value type"`
+		for the [disabled] property, the expression must resolve to True/False
 
-4.	Availability
+	Property binding works one way, from component to the DOM:
+
+			Component (with its properties) -----> DOM 
+
+	If the property changes in the component, the DOM element will be updated.  But any changes in the DOM are not reflected back to the component.
+
+3.	What is Event Binding?
+	
+		Component listens to events emitted from a DOM element
+
+		Example: listening for the button click event
+		`<button (click) = "expression handling the event"`
+
+		The expression could be a simple inline expression or a method() to be executed.
+
+4.	Two-Way Data Binding
+		Be default, Angular2 is unidirectional.  This makes apps faster!
+
+		But two-way data binding is still available.  It sends data and listens for events, combining property[] and event() binding using the ngModel keyword.
+
+		Example:
+		`<input [(ngModel)] = "bound model (e.g.object)">`
+
+
+5.	Availability
 
 		a.	DOM properties and events
 
 				< img [src] = "...">
+				src is a native property built into the DOM
 
 				<img [click] = "...">
+				click is a native event built into the DOM
 
 		b.	Angular2 directive properties and events
 
 				<div [ngClass] = "...">
+				ngClass allows you to add CSS classes to an element
 
 				<div (ngSubmit) = "...">
 
@@ -190,7 +231,7 @@ This directive would be helpful for form validation.
 
 				<cmp (rndEvent) = "...">
 
-5.	Custom Bindings for directives and components
+6.	Custom Bindings for directives and components
 
 		i.	Property binding
 
@@ -202,13 +243,13 @@ This directive would be helpful for form validation.
 				@Output() eventName = newEventEmitter();
 
 
-Two Property Binding Syntaxes
+7.	Two Property Binding Syntaxes
 
 		a.	<img [src] = "imageUrl" />
 
 		b.	<img bind-src = "imageUrl" />
 
-5.	Interpolation works well for dynamic headings, divs, and paragraphs, or wherever you want to render text.  Use the second syntax for everything else.
+8.	Interpolation works well for dynamic headings, divs, and paragraphs, or wherever you want to render text.  Use the second syntax for everything else.
 
 
 ## Saturday, January 14, 2017
