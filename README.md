@@ -639,7 +639,7 @@ Conclusion:
 
 Purpose:	To display an element and its children from a set of possible elements, based on a condition.
 
-Example:	An app lists the best restaurants in a neighborhood.  The navigation bar provides two buttons to choose from:  Map View and List View.
+Example:	An app that lists the best restaurants in a neighborhood.  The navigation bar provides two buttons to choose:  Map View and List View.
 
 **ngFor**
 
@@ -663,6 +663,21 @@ Syntax:
 				{{ i + 1}} - {{ course }}
 			</li>
 		</ul>`
+
+**Pipes**
+Used to format data
+
+Code:	pipes.component.ts
+
+Types
+1.	Built-In
+		Uppercase
+		Lowercase
+		Decimal
+		Currency
+		Date
+		JSON
+2.	Custom
 
 
 
