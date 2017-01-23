@@ -11,8 +11,7 @@ import { Component } from 'angular2/core'
 
 	template: `
 		<hr class = "style1">
-		<h3> Schools </h3>
-		<hr class = "style1">
+		<h3>Schools</h3>
 		<ul>
 			<li *ngFor = "#school of schools, #i = index">
 				{{ i + 1}} - {{ school }}

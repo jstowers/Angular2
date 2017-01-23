@@ -29,7 +29,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                     core_1.Component({
                         selector: 'ngfor',
                         styleUrls: ['app/ngfor.component.css'],
-                        template: "\n\t\t<hr class = \"style1\">\n\t\t<h3> Schools </h3>\n\t\t<hr class = \"style1\">\n\t\t<ul>\n\t\t\t<li *ngFor = \"#school of schools, #i = index\">\n\t\t\t\t{{ i + 1}} - {{ school }}\n\t\t\t</li>\n\t\t</ul>\n\t",
+                        template: "\n\t\t<hr class = \"style1\">\n\t\t<h3>Schools</h3>\n\t\t<ul>\n\t\t\t<li *ngFor = \"#school of schools, #i = index\">\n\t\t\t\t{{ i + 1}} - {{ school }}\n\t\t\t</li>\n\t\t</ul>\n\t",
                     }), 
                     __metadata('design:paramtypes', [])
                 ], NgForComponent);

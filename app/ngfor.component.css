@@ -1,3 +1,7 @@
 hr.style1 {
-	border-top: 1px solid #8c8b8b;
+	border-top: 2px solid #8c8b8b;
+}
+
+h3 {
+	margin-left: 20px;
 }
