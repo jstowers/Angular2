@@ -1,5 +1,4 @@
 // Mosh
-// Sec. 5, Lec 51
 System.register(['angular2/core'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
@@ -22,14 +21,36 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         execute: function() {
             NgForComponent = (function () {
                 function NgForComponent() {
-                    this.schools = ['MakerSquare', 'University of Houston',
-                        'Baylor Law School', 'University of New Mexico'];
+                    //schools = ['MakerSquare', 'University of Houston',
+                    //			'Baylor Law School', 'University of New Mexico'];
+                    this.schools = [
+                        {
+                            name: 'MakerSquare',
+                            subject: 'Software Engineering',
+                            year: '2016'
+                        },
+                        {
+                            name: 'University of Houston',
+                            subject: 'Petroleum Engineering',
+                            year: '2009'
+                        },
+                        {
+                            name: 'Baylor Law School',
+                            subject: 'Law',
+                            year: '2002'
+                        },
+                        {
+                            name: 'University of New Mexico',
+                            subject: 'Chemical Engineering',
+                            year: '2000'
+                        }
+                    ];
                 }
                 NgForComponent = __decorate([
                     core_1.Component({
                         selector: 'ngfor',
                         styleUrls: ['app/ngfor.component.css'],
-                        template: "\n\t\t<hr class = \"style1\">\n\t\t<h3>Schools</h3>\n\t\t<ul>\n\t\t\t<li *ngFor = \"#school of schools, #i = index\">\n\t\t\t\t{{ i + 1}} - {{ school }}\n\t\t\t</li>\n\t\t</ul>\n\t",
+                        template: "\n\t\t<hr class = \"style1\">\n\t\t<h3>Schools</h3>\n\t\t<ul>\n\t\t\t<li *ngFor = \"#school of schools, #i = index\">\n\t\t\t\t{{ i + 1}} - {{ school.name }}: {{ school.subject }}\n\t\t\t</li>\n\t\t</ul>\n\t",
                     }), 
                     __metadata('design:paramtypes', [])
                 ], NgForComponent);
