@@ -2,8 +2,7 @@ h3 {
 	margin-left: 20px;
 }
 
-/* assigns a 2px solid gray border 
-to the top of side */
+/* horizontal line - 2px solid gray */
 hr.style1 {
 	border-top: 2px solid #8c8b8b;
 }
