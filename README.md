@@ -641,6 +641,7 @@ Purpose:	To display an element and its children from a set of possible elements,
 
 Example:	An app lists the best restaurants in a neighborhood.  The navigation bar provides two buttons to choose from:  Map View and List View.
 
+**ngFor**
 
 
 
