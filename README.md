@@ -643,6 +643,26 @@ Example:	An app lists the best restaurants in a neighborhood.  The navigation ba
 
 **ngFor**
 
+Syntax:
+		`<ul>
+			<li *ngFor = "#school of schools"></li>
+		</ul>`
+
+		#school of schools is microsyntax that Ang2 understands
+
+			#school = local variable
+
+			of = keyword
+
+			schools = variable we want to iterate
+
+	If we want to add an index, i, available in Ang2:
+
+		`<ul>
+			<li *ngFor = "#school of schools, #i = index">
+				{{ i + 1}} - {{ course }}
+			</li>
+		</ul>`
 
 
 

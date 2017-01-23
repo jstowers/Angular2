@@ -7,10 +7,17 @@ import { Component } from 'angular2/core'
 
 	selector: 'ngfor',
 
+	styleUrls: ['app/ngfor.component.css'],
+
 	template: `
-
-
-
+		<hr class = "style1">
+		<h3> Schools </h3>
+		<hr class = "style1">
+		<ul>
+			<li *ngFor = "#school of schools, #i = index">
+				{{ i + 1}} - {{ school }}
+			</li>
+		</ul>
 	`,
 
 })
