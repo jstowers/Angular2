@@ -679,15 +679,32 @@ Types
 		JSON
 2.	Custom
 
+## Friday, January 27, 2017
 
 **Building a Basic Form**
 
+1.	Bootstrap form-group => creates modern, responsive forms
+		
+		```` <form>	
+				<div class = "form-group"
 
+2.	Zen Coding
 
+		Write HTML code using CSS formatting:
+	
+			div.form-group + Tab
 
+			<div class = "form-group"></div>	
 
+		Syntax
 
+			.	=>	classes
 
+			>	=>	immediate children
+			
+			+ 	=>	siblings
+
+			[]	=>	attributes
 
 
 
