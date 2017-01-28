@@ -683,20 +683,25 @@ Types
 
 **Building a Basic Form**
 
-1.	Bootstrap form-group => creates modern, responsive forms
-		
-		```` <form>	
+1.	Bootstrap 'form-group' creates modern, responsive forms
+			
+		````
+			<form>	
 				<div class = "form-group"
+					
+				</div>
+			</form>
+
+		````
+
 
 2.	Zen Coding
 
-		Write HTML code using CSS formatting:
+	a. 	Write HTML code using CSS formatting:
 	
-			div.form-group + Tab
+			div.form-group + Tab	=>	<div class="form-group"></div>	
 
-			<div class = "form-group"></div>	
-
-		Syntax
+	b. 	Syntax
 
 			.	=>	classes
 
@@ -707,4 +712,8 @@ Types
 			[]	=>	attributes
 
 
+## Saturday, January 28, 2017
 
+** Control and ControlGroup **
+
+Upgrad
