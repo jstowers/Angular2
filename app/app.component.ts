@@ -18,6 +18,8 @@ import {PptybindComponent} from './pptybind.component';
 import {SwitchComponent} from './ngswitch.component';
 import {NgForComponent} from './ngfor.component';
 
+import {ContactFormComponent} from './contact-form.component';
+
 
 @Component({
 
@@ -31,6 +33,7 @@ import {NgForComponent} from './ngfor.component';
     			<h2>{{ author }}</h2>
     			<switch></switch>
     			<ngfor></ngfor>
+    			<contact-form></contact-form>
 			</div>
     	`,
 
@@ -59,7 +62,7 @@ import {NgForComponent} from './ngfor.component';
 
     directives: [CoursesComponent, AuthorsComponent, BindingComponent, FavoriteComponent,
     			LikeComponent, VoterComponent, TweetComponent, TweetsComponent, PptybindComponent,
-    			SwitchComponent, NgForComponent]
+    			SwitchComponent, NgForComponent, ContactFormComponent]
 })
 
 // view component that takes control over entire app
