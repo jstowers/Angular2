@@ -714,6 +714,61 @@ Types
 
 ## Saturday, January 28, 2017
 
-** Control and ControlGroup **
+**Control and ControlGroup**
 
-Upgrad
+1.  Control
+
+Angular Control class represents a single input field in a form:
+
+		Control -------->  [First Name]
+
+Control properties:
+	1.	value
+	2. 	touched
+	3. 	untouched
+	4. 	dirty
+	5. 	pristine
+	6. 	valid
+	7. 	validation errors
+
+
+2. 	ControlGroup
+
+Angular ControlGroup class represents a group of controls in a form:
+
+		Control --------->  [ First Name ]
+							[  Comment   ]
+
+ControlGroup properties are the same as Control class
+
+Both Control and ControlGroup classes derive their properties from the same
+base class called AbstractControl.
+
+
+3.  Creating Controls
+
+Two ways to create:
+	1. 	Explict - more control over validation logic, unit test
+	2. 	Implicit - by Angular2, simpler
+
+
+**ngControl**
+Need to associate controls with input fields in forms.  Use directive ngControl to create this association.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
