@@ -753,7 +753,24 @@ Two ways to create:
 
 
 **ngControl**
-Need to associate controls with input fields in forms.  Use directive ngControl to create this association.
+Need to associate controls with the input fields in forms.  Ang2 uses ngControl directive to create this association.
+
+Ang2 associates the input field with the ngControl object 'firstName':
+
+		<input ngControl="firstName" id="firstName" . . . >
+
+Note, the id attribute is for DOM elements, which is different than the ngControl object of the same name.  For clean, maintainable code, you can use the same name, but note ngControl and id serve different purposes.
+
+To see the ngControl object, we can use event binding to log the output of the control object.
+
+To do this, we first need to create a temporary, local variable to reference the ngControl object:
+
+		<input ngControl="firstName" #firstName="ngForm"
+
+When Ang2 sees a temporary, local variable set to "ngForm", it will automatically apply set it to the ngControl directive for that `<input>` field.
+
+
+
 
 
 
