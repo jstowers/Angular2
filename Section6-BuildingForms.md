@@ -6,9 +6,11 @@
 
 **Form Types**
 1.  Template driven
+
         Easier to write
         Less control over validation
 
 2.  Model driven
+
         A little more code
         Full control over validation
