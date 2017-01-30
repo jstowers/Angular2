@@ -681,6 +681,15 @@ Types
 
 ## Friday, January 27, 2017
 
+**Form Types**
+1. 	Template driven
+		Easier to write
+		Less control over validation
+2. 	Model driven
+		A little more code
+		Full control over validation
+
+
 **Building a Basic Form**
 
 1.	Bootstrap 'form-group' creates modern, responsive forms
