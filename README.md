@@ -769,6 +769,9 @@ To do this, we first need to create a temporary, local variable to reference the
 
 When Ang2 sees a temporary, local variable set to "ngForm", it will automatically apply set it to the ngControl directive for that `<input>` field.
 
+When testing, the change event is triggered by pressing 'Tab'.
+
+
 
 
 
